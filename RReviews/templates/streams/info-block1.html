@@ -1,0 +1,35 @@
+{% load static %} {% load wagtailimages_tags %}
+<!-- chart-section -->
+<section class="chart-section bg-color-3">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-6 col-sm-12 content-column">
+                <div id="content_block_eight">
+                    <div class="content-box">
+                        <div class="sec-title style-three left light">
+                            <h5>{{ self.title1_small }}</h5>
+                            <h2>{{ self.title2_bold }}</h2>
+                        </div>
+                        <div class="text">
+                            <p>{{ self.paragraph }}</p>
+                        </div>
+                        {% if self.button_page %}
+                        <div class="btn-box">
+                            <a href="{{ self.button_page }}">{{ self.button_label }}</a>
+                        </div>
+                        {% elif self.button_url %}
+                        <div class="btn-box">
+                            <a href="{{ self.button_url }}">{{ self.button_label }}</a>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% image self.image fill-570x350 as img %}
+            <div class="col-lg-6 col-md-6 col-sm-12 chart-column">
+                <figure class="chart-box"><img src="{{ img.url }} " alt=" {{ img.alt }}""></figure>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- chart-section end -->

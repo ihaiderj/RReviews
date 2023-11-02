@@ -1,0 +1,72 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- about-section -->
+<section class="about-section bg-color-1">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12 video-column">
+                <div class="video-inner">
+                    {% image self.image fill-1000x500 as img %}
+                    <figure class="image-box">
+                        <img style="width: 500px; height: 470px" src="{{ img.url }}" alt=" {{ img.alt }}" />
+                    </figure>
+                    <div class="video-btn">
+                        <a href="{{ self.youtubeurl }}" class="lightbox-image" data-caption="" style="
+                background-image: url({% static 'images/resource/btn-bg.png' %});
+              "><i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div id="content_block_one">
+                    <div class="content-box">
+                        <div class="sec-title left">
+                            <h5>{{ self.title1_small }}</h5>
+                            <h2>{{ self.title2_bold }}</h2>
+                        </div>
+                        <div class="text">
+                            <p>{{ self.text }}</p>
+                        </div>
+                        <div class="inner-box">
+                            <div class="single-item">
+                                <div class="icon-box">
+                                    <span class="bg-box"></span>
+                                    {% if self.icon1 %}
+                                    <i class="{{ self.icon1 }}"></i>
+                                    {% endif %}
+
+                                </div>
+
+                                <h4>
+                                    {% if self.button_page %}
+                                    <a href="{{ self.button_page }}"><span>{{ self.sub_title_1 }}</span></a>
+                                    {% elif self.button_url %}
+                                    <a href="{{ self.button_url }}"><span>{{ self.sub_title_1 }}</span></a>
+                                    {% endif %}
+                                </h4>
+                                <p>{{ self.sub_title_text_1}}</p>
+                            </div>
+                            <div class="single-item">
+                                <div class="icon-box">
+                                    <span class="bg-box"></span>
+                                    {% if self.icon2 %}
+                                    <i class="{{ self.icon2 }}"></i>
+                                    {% endif %}
+                                </div>
+                                <h4>
+                                    {% if self.button_page_1 %}
+                                    <a href="{{ self.button_page_1 }}"><span>{{ self.sub_title_text_2 }}</span></a>
+                                    {% elif self.button_url %}
+                                    <a href="{{ self.button_url_1 }}"><span>{{ self.sub_title_text_2 }}</span></a>
+                                    {% endif %}
+                                </h4>
+                                <p>{{ self.sub_title_text_2}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about-section end -->

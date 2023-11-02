@@ -1,0 +1,1324 @@
+{% extends 'about-1.html' %} {% load static %} {% load wagtailimages_tags %}
+{% block content %}
+<div class="memberauto-container">
+  <div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+      <ul class="list-unstyled components">
+        <!-- <p>Welcome</p> -->
+        <li class="items">
+          <a href="#" >Home</a>
+        </li>
+        <li class="items">
+          <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Design Your Menu</a>
+          <ul class="collapse list-unstyled" id="pageSubmenu">
+            <li id="select-subtitle"><a href="#Mainmenu">Select your menu subtitles</a>
+            </li>
+          </ul>
+        </li>
+        <li id="mainmenu1" class="items">
+          <a href="#mainmenu12" data-toggle="collapse" aria-expanded="false">Main Menu</a>
+          <ul class="collapse list-unstyled" id="mainmenu12">
+            <li id="mainmenu123 item"><a href="#mainmenu4" data-toggle="collapse" aria-expanded="false">Breakfast Menu</a>
+              <ul class="collapse list-unstyled" id="mainmenu4">              
+                  <li >
+                    <a href="#" class="subsubmenu">Menu Item 1</a>
+                  </li>
+                  <li >
+                    <a href="#" class="subsubmenu" >Menu Item 2</a>
+                  </li>
+                  <li >
+                    <a href="#" class="subsubmenu">Menu Item 3</a>
+                  </li>
+                </ul>
+            </li>
+            <li id="mainmenu123 item"><a href="#mainmenu5" data-toggle="collapse" aria-expanded="false">Bread</a>
+              <ul class="collapse list-unstyled" id="mainmenu5">
+                <li><a href="#" class="subsubmenu">Menu Item 1</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 2</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 3</a>
+                </li>
+              </ul>
+            </li>
+            <li id="mainmenu123 item"><a href="#mainmenu6" data-toggle="collapse" aria-expanded="false">Entrées
+              </a>
+              <ul class="collapse list-unstyled" id="mainmenu6">
+                <li><a href="#" class="subsubmenu">Menu Item 1</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 2</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 3</a>
+                </li>
+              </ul>
+            </li>
+            <li id="mainmenu123 item"><a href="#mainmenu7" data-toggle="collapse" aria-expanded="false">Specials
+              </a>
+              <ul class="collapse list-unstyled" id="mainmenu7" >
+                <li><a href="#" class="subsubmenu">Menu Item 1</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 2</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 3</a>
+                </li>
+              </ul>
+            </li>
+            <li id="mainmenu123 item"><a href="#mainmenu8" data-toggle="collapse" aria-expanded="false">Lunch Menus</a>
+              <ul class="collapse list-unstyled" id="mainmenu8">
+                <li><a href="#" class="subsubmenu">Menu Item 1</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 2</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 3</a>
+                </li>
+              </ul>
+            </li>
+            <li id="mainmenu123 item"><a href="#mainmenu9" data-toggle="collapse" aria-expanded="false">Dinner Menus</a>
+              <ul class="collapse list-unstyled" id="mainmenu9">
+                <li><a href="#" class="subsubmenu">Menu Item 1</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 2</a>
+                </li>
+                <li><a href="#" class="subsubmenu">Menu Item 3</a>
+                </li>
+              </ul>
+            </li>
+      </ul>
+        </li>
+        <li class="items">
+          <a href="">View Full Menu</a>
+        </li>
+        <li class="items">
+          <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class>Venue Details (7)
+          </a>
+          <ul class="collapse list-unstyled" id="homeSubmenu">
+            <li><a href="#">Venue Name</a></li>
+            <li><a href="#">Address</a></li>
+            <li><a href="#">Venue Type</a></li>
+            <li><a href="#">Cuisine Type</a></li>
+            <li><a href="#">Hours of Operation</a></li>
+            <li><a href="#">Contact Information</a></li>
+            <li><a href="#">Social Media Links</a></li>
+          </ul>
+        </li>
+        <li class="items">
+          <a href="#">Manage Reviews</a>
+        </li>
+        <li class="items">
+          <a href="#">View Statistics</a>
+        </li>
+        <li class="items">
+          <a href="#">Marketing & Promotions</a>
+        </li>
+        <li class="items">
+          <a href="#">Contact Customers</a>
+        </li>
+      </ul>
+  </nav>
+
+  <div class="navbar-header">
+    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="
+      width: 35px; ">
+      <i class="glyphicon glyphicon-align-left"></i>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+    <nav class="navbar venue-manager">
+      <div class="container-fluid">
+      </div>
+      <div class="memberhome sec-title-two">
+        <h2 class="">Manage your menu and reviews</h2>
+        <p>Every venue listed with Restaurant Reviews is different and requires different levels of support and backup
+          to ensure that your venue has the best online presence possible in this marketplace. Therefore, we believe
+          that you as the venue managers should have full creative control on how your venue is perceived. Restaurant
+          reviews makes it possible to search your local area for specific dishes, popular foods and cuisines. We make
+          it easier for the public to find your restaurant and view your menu either before they visit or while they
+          are dining. The first step of this journey is to create your online menu that you can change and edit at any
+          time. Simply start by clicking the first link to start building your menu and your online presence.</p>
+      </div>
+      <div class="main-menu-edit sec-title-two ">
+        <div class="menu-subtitle-header">
+          <h2 class="">Create , Edit, Delete menu</h2>
+
+          <section class="about-section bg-color-1">
+            <div class="auto-container">
+              <div class="row clearfix">
+                <div class="col-lg-6 col-md-12 col-sm-12 video-column">
+                  <div class="video-inner">
+
+                    <div class="video-btn">
+                      <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image"
+                        data-caption="" style="
+                              background-image: url({% static 'images/resource/btn-bg.png' %});
+                            "><i class="fas fa-play"></i></a>
+                      <h4>Tutorial</h4>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="submenu-result submenu-edit">
+          <div class="auto-container">
+            <div class="row clearfix">
+              <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                <div class="blog-details-content">
+                  <div class="comments-area">
+                    <div class="comment-box">
+                      <div class="comment">
+                        <div class="comment-inner">
+                          <div class="comment-info clearfix">
+                            <div class="name pull-left">
+                              <h5>Breakfast Menu
+                              </h5>
+                            </div>
+                            <div class="info pull-right menu-price-op">
+                              <span>Memebers</span>
+                              <span id="btn-visitor">Visitors</span>
+                              <span id="btn-price">Price</span>
+
+                            </div>
+                          </div>
+                          <div class="text">
+                            <p>Breakfast Served 6am – 10:30am
+                            </p>
+
+                          </div>
+                          <div class="btns-group btn-color">
+                            <a class="btn btn-next " id="editmainmenu">Edit</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-box add-menuitems">
+            <a href="#" class="theme-btn style-two" id="additems1"><i class="fas fa-plus"></i> CLICK HERE to Add menu
+              item to the
+              Breakfast menu</a>
+          </div>
+        </div>
+
+
+        <div class="saved-menu-items">
+          <div class="sub-heading">
+            <h3 class="">Menu items already created under Breakfast Menu</h3>
+          </div>
+          <div class="row clearfix">
+            <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+              <div class="blog-details-content">
+                <div class="comments-area">
+
+                  <div class="comment-box">
+                    <div class="comment">
+                      <figure class="thumb-box">
+                        <img src="{% static 'images/menu/menu-pizzas1.jpg' %}" alt="">
+                      </figure>
+                      <div class="comment-inner">
+                        <div class="comment-info clearfix">
+                          <div class="name pull-left">
+                            <h5>Robert Gates</h5>
+                          </div>
+                          <div class="info pull-right">
+                            <span>Recommended</span>
+                            <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                            culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                            omnis iste.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <figure class="thumb-box">
+                        <img src="{% static 'images/menu/menu-pizzas2.jpg' %}" alt="">
+                      </figure>
+                      <div class="comment-inner">
+                        <div class="comment-info clearfix">
+                          <div class="name pull-left">
+                            <h5>Robert Gates</h5>
+                          </div>
+                          <div class="info pull-right">
+                            <!-- <span>Recommended</span> -->
+                            <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                            culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                            omnis iste.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment">
+                      <figure class="thumb-box">
+                        <img src="{% static 'images/menu/menu-pizzas3.jpg' %}" alt="">
+                      </figure>
+                      <div class="comment-inner">
+                        <div class="comment-info clearfix">
+                          <div class="name pull-left">
+                            <h5>Robert Gates</h5>
+                          </div>
+                          <div class="info pull-right">
+                            <span>Recommended</span>
+                            <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                          </div>
+                        </div>
+                        <div class="text">
+                          <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                            culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                            omnis iste.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-subtitle sec-title-two">
+        <div class="menu-subtitle-header">
+          <h2 class="">Create Your Menu Subtitles</h2>
+          <section class="about-section bg-color-1">
+            <div class="auto-container">
+              <div class="row clearfix">
+                <div class="col-lg-6 col-md-12 col-sm-12 video-column">
+                  <div class="video-inner">
+
+                    <div class="video-btn">
+                      <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image"
+                        data-caption="" style="
+                              background-image: url({% static 'images/resource/btn-bg.png' %});
+                            "><i class="fas fa-play"></i></a>
+                      <h4>Tutorial</h4>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="steps">
+          <h5> <span>Step 1 :</span> Name your Menus subcategory such as Breakfast , Lunch, Mains, Pizza, Deserts
+            etc.
+          </h5>
+          <h5> <span>Step 2 :</span> Select whether you need to add a brief description under the menu subtitle.
+          </h5>
+          <h5> <span>Step 3 :</span> Select if you need to add multiple prices for VIP or Members pricing benefits.
+          </h5>
+        </div>
+        <div class="submenu-form">
+          <form action="" method="post">
+            {% csrf_token %}
+            <div class="submenu-type">
+              <input class="input-field" type="text" placeholder="BREAKFAST" required />
+
+              <select class="nice-select" name="submenu-type" id="submenus">
+                <option value="Select From Popular Sub menus
+                    " class="option">Select From Popular Sub menus
+                </option>
+                <optgroup label="Breakfast Menu" class="option">
+
+                  <option value="Breakfast Menu" class="option">Breakfast Menu</option>
+                  <option value="Breakfast Menu (7am -10:30 am)" class="option">Breakfast Menu (7am -10:30 am)
+                  </option>
+                  <option value="All Day Breakfast" class="option">All Day Breakfast</option>
+                  <option value="All Day Breakfast - Till 2pm" class="option">All Day Breakfast - Till 2pm</option>
+                  <option value="Early Risers" class="option">Early Risers</option>
+                  <option value="Cereals" class="option">Cereals</option>
+                </optgroup>
+                <optgroup label="Breads">
+                  <option value="Breads">Breads</option>
+                  <option value="Sandwiches">Sandwiches</option>
+                  <option value="Breads to Share">Breads to Share</option>
+                  <option value="Breads & Share">Breads & Share</option>
+                  <option value="Gourmet Rolls">Gourmet Rolls</option>
+                  <option value="Subs">Subs</option>
+                  <option value="Antipasto">Antipasto</option>
+                  <option value="Wraps">Wraps</option>
+
+                </optgroup>
+                <optgroup label="Starters & Entrée">
+                  <option value="Starters">Starters</option>
+                  <option value="Entrée">Entrée</option>
+                  <option value="Appetisers">Appetisers</option>
+                  <option value="Soups">Soups</option>
+                  <option value="Oysters">Oysters</option>
+                  <option value="Snacks">Snacks</option>
+                  <option value="Antipasto">Antipasto</option>
+                </optgroup>
+                <optgroup label="Bowls & Salads">
+                  <option value="Bowls & Salads">Bowls & Salads</option>
+                  <option value="Bowles">Bowles</option>
+                  <option value="Salads">Salads</option>
+                  <option value="Healthy">Healthy</option>
+                  <option value="Healthy Choices">Healthy Choices</option>
+                  <option value="Healthy Food">Healthy Food</option>
+                  <option value="Vegetarian">Vegetarian</option>
+                  <option value="Vegan">Vegan</option>
+
+                </optgroup>
+                <optgroup label="Favourites">
+                  <option value="Burgers">Burgers</option>
+                  <option value="Carvery">Carvery</option>
+                  <option value="Classics">Classics</option>
+                  <option value="Club Favourites">Club Favourites</option>
+                  <option value="Curries">Curries</option>
+                  <option value="Dumplings">Dumplings</option>
+                  <option value="Favorites">Favorites</option>
+                  <option value="Nachos">Nachos</option>
+                  <option value="Noodles">Noodles</option>
+                  <option value="Pasta">Pasta</option>
+                  <option value="Pies">Pies</option>
+                  <option value="Pub Favourites">Pub Favourites</option>
+                  <option value="Sushi">Sushi</option>
+
+                </optgroup>
+                <optgroup label="Mains">
+                  <option value="Mains">Mains</option>
+                  <option value="Main Courses">Main Courses</option>
+                  <option value="From The Grill">From The Grill</option>
+                  <option value="From the Ocean">From the Ocean</option>
+                  <option value="Steak">Steak</option>
+                  <option value="Seafood">Seafood</option>
+                  <option value="Chicken">Chicken</option>
+                  <option value="Lamb">Lamb</option>
+                  <option value="Veal">Veal</option>
+                  <option value="Beef">Beef</option>
+                  <option value="Pork">Pork</option>
+                  <option value="Fish">Fish</option>
+                  <option value="Grill">Grill</option>
+                  <option value="Tacos">Tacos</option>
+                  <option value="Burritos">Burritos</option>
+                  <option value="Quesadillas">Quesadillas</option>
+                  <option value="Enchiladas">Enchiladas</option>
+                  <option value="Schnitzel">Schnitzel</option>
+                </optgroup>
+                <optgroup label="Rice">
+                  <option value="Rice">Rice</option>
+                  <option value="Rice Dishes">Rice Dishes</option>
+                  <option value="Risottos">Risottos</option>
+                </optgroup>
+                <optgroup label="Seniors">
+                  <option value="Seniors">Seniors</option>
+                  <option value="Senior Meals">Senior Meals</option>
+                  <option value="Pensioners">Pensioners</option>
+                  <option value="Pensioner Meals">Pensioner Meals</option>
+                </optgroup>
+                <optgroup label="Kids">
+                  <option value="Kids">Kids</option>
+                  <option value="Kids Menu">Kids Menu</option>
+                  <option value="Kids Meals">Kids Meals</option>
+                  <option value="Children’s Menu">Children’s Menu</option>
+                  <option value="Children’s Meals">Children’s Meals</option>
+                  <option value="Munchkin Meals">Munchkin Meals</option>
+                </optgroup>
+                <optgroup label="Sides">
+                  <option value="Sides">Sides</option>
+                  <option value="Sauces">Sauces</option>
+                  <option value="Gravy's">Gravy's</option>
+                  <option value="Condiments">Condiments</option>
+                  <option value="Extras">Extras</option>
+                </optgroup>
+
+                <optgroup label="Specials">
+                  <option value="Specials">Specials</option>
+                  <option value="Today's Specials">Today's Specials</option>
+                  <option value="Members Specials">Members Specials</option>
+                </optgroup>
+
+                <optgroup label="Courses">
+                  <option value="Courses">Courses</option>
+                  <option value="Set Courses">Set Courses</option>
+                  <option value="Sharing Plates">Sharing Plates</option>
+                  <option value="Meal Deals">Meal Deals</option>
+                  <option value="Combos">Combos</option>
+                  <option value="Combination Meals">Combination Meals</option>
+                  <option value="Deals">Deals</option>
+                </optgroup>
+                <optgroup label="Pizzas">
+                  <option value="Pizzas">Pizzas</option>
+                </optgroup>
+                <optgroup label="Deserts">
+                  <option value="Deserts">Deserts</option>
+                  <option value="Crepes">Crepes</option>
+                  <option value="Donuts">Donuts</option>
+                  <option value="Ice Cream">Ice Cream</option>
+                  <option value="Gelati">Gelati</option>
+                  <option value="Pastries">Pastries</option>
+                  <option value="Pancakes">Pancakes</option>
+                  <option value="Waffles">Waffles</option>
+                  <option value="Fruit">Fruit</option>
+                  <option value="Specialty Deserts">Specialty Deserts</option>
+                </optgroup>
+                <optgroup label="Beverages">
+                  <option value="Beverages">Beverages</option>
+                  <option value="Drinks">Drinks</option>
+                  <option value="Cold Drinks">Cold Drinks</option>
+                  <option value="Mocktails">Mocktails</option>
+                  <option value="Milk Shakes ">Milk Shakes</option>
+                  <option value="Juices">Juices</option>
+                  <option value="Coffees">Coffees</option>
+                  <option value="Flavoured Milks">Flavoured Milks</option>
+                  <option value="Non Alcoholic Beverages">Non Alcoholic Beverages</option>
+                  <option value="Hot beverages">Hot beverages</option>
+                  <option value="Hot Drinks">Hot Drinks</option>
+                  <option value="Coffees / Teas">Coffees / Teas</option>
+                </optgroup>
+                <optgroup label="Alcoholic Beverages">
+                  <option value="Alcoholic Beverages">Alcoholic Beverages</option>
+                  <option value="Cocktails">Cocktails</option>
+                  <option value="Wines">Wines</option>
+                  <option value="Champagne">Champagne</option>
+                  <option value="Sparkling Wines">Sparkling Wines</option>
+                  <option value="Wiskyes">Wiskyes</option>
+                  <option value="Bourbons">Bourbons</option>
+                  <option value="Vodkas">Vodkas</option>
+                  <option value="Beers">Beers</option>
+                  <option value="Ciders">Ciders</option>
+
+                </optgroup>
+
+              </select>
+            </div>
+            <div class="addinfo">
+              <input type="checkbox" name="AdditionInfo-Menus" id="afmenu">
+              <input class="input-field" type="text"
+                placeholder="Add subtext notes (example: Breakfast served 6am – 10:30am)" />
+            </div>
+            <div class="addprice-menus ">
+              <input type="checkbox" name="AdditionInfo-Menus1" id="afmenu1">
+              <label for="afmenu">Add pricing guide (example: Members Price / Visitors Price)
+              </label>
+            </div>
+            <div class="submenu-result">
+              <div class="auto-container">
+                <div class="row clearfix">
+                  <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                    <div class="blog-details-content">
+                      <div class="comments-area">
+
+                        <div class="comment-box">
+                          <div class="comment">
+
+                            <div class="comment-inner">
+                              <div class="comment-info clearfix">
+                                <div class="name pull-left">
+                                  <h5>Breakfast Menu
+                                  </h5>
+                                </div>
+                                <div class="info pull-right menu-price-op">
+                                  <span>Memebers</span>
+                                  <span id="btn-visitor">Visitors</span>
+                                  <span id="btn-price">Price</span>
+
+                                </div>
+                              </div>
+                              <div class="text">
+                                <p>Breakfast Served 6am – 10:30am
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btns-group btn-color">
+              <a class="btn btn-next " id="savesubmenu">Save Submenu</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="venue-details sec-title-two">
+        <form action="#" class="formMulti-step formMulti-step-edit" name="registervenue">
+          {% csrf_token %}
+          <div class="heading-bar">
+            <h3>Edit Basic Venue Detail: </h3>
+            <p>Venue Name, Phone, Website, Email, Venue Address</p>
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Name</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="text" placeholder="Type Venue Name here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Phone</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="number" placeholder="Type Phone Number here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Website</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="text" placeholder="Type Website Address here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Email</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="email" placeholder="Type Email Address here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Address</label>
+            <input class="input-field" id="map-search" class="controls" type="text" required
+              placeholder="Enter full Restaurant / Venue address here"> <br>
+          </div>
+          <label for="" class="data-format"><span style="color: green;">Address format:</span> Shop Number / Unit
+            Number
+            / Street Number, Street Name, City/Town Name, State, Country</label>
+
+          <div id="map"></div> <br>
+          <div class="addrschoice addrschoice-edit">
+            <label for="" class="data-format">If you are unable to locate your venue on Google Map, you can enter
+              Venue
+              Address manually by clicking</label>
+            <a class="btn" id="EMaddress">Enter Address Manually</a>
+          </div>
+          <div class="addrschoice1">
+
+            <a class="btn" id="EMaddress">Close</a>
+          </div>
+
+          <!-- Manual address block -->
+
+          <div class="manualaddress manualaddress-edit">
+            <div class="c0">
+              <input class="input-field" class="vaddrs" type="text" placeholder="Shop Number">
+              <input class="input-field" class="vaddrs" id="sn" type="text" required placeholder="Street Number"
+                value="Delhi, India">
+              <input class="input-field" class="vaddrs" type="text" required placeholder="Town Name">
+              <div class="vaddrsselect">
+                <select id="country" name="country" required style="height: 55px;"></select>
+              </div>
+              <!-- <input class="input-field"  class="vaddrs" type="number" required placeholder="Venue Phone Number"> -->
+
+              <!-- <input class="input-field"  class="vaddrs" type="text" placeholder="Website"> -->
+            </div>
+            <div class="c2" style="margin: 0px 0 0 -90px;">
+              <input class="input-field" class="vaddrs" type="text" placeholder="Unit Number">
+              <input class="input-field" class="vaddrs" type="text" placeholder="Street Name" required>
+              <div class="vaddrsselect">
+                <select name="state" id="state" required style="height: 55px;"></select>
+              </div>
+              <input class="input-field" class="vaddrs" type="text" placeholder="Postal Code/ Zip Code" required>
+              <!-- <input class="input-field"  class="vaddrs" type="number" placeholder="Alternative Number"> -->
+            </div>
+          </div>
+          <div class="venuetype-edit" id='vtype-edit'>
+
+            <div class="heading-bar">
+              <h3>Venue Type:</h3>
+              <p>Please select what style of Restaurant / Venue that your registering</p>
+            </div>
+            <p class="vtvalidate">* You must choose at least one type of venue</p>
+            <div class="venuetype1">
+              <div class="v-type"><input type="checkbox" name="Fine Dining" id="fd" required> <label for="fd">Fine
+                  Dining</label></div>
+              <div class="v-type"><input type="checkbox" name="Casual Dining" id="cd" required> <label for="cd">Casual
+                  Dining</label></div>
+              <div class="v-type"><input type="checkbox" name="Family Friendly" id="ff" required> <label for="ff">Family
+                  Friendly(Children Welcome)</label></div>
+              <div class="v-type"><input type="checkbox" name="Healthy Food" id="hd" required> <label for="hd">Healthy
+                  Food Options(catering for vegetarians, vegans, gluten free etc..)</label></div>
+              <div class="v-type"><input type="checkbox" name="Fast Food" id="ffood" required> <label for="ffood">Fast
+                  Food</label></div>
+              <div class="v-type"><input type="checkbox" name="Take Away" id="ta" required> <label for="ta">Takeaway
+                  Available</label></div>
+              <div class="v-type"><input type="checkbox" name="CafeCoffee" id="ccoffee" required> <label
+                  for="ccoffee">Cafés
+                  & Coffee Shops</label>
+              </div>
+            </div>
+
+          </div>
+          <div class="cuisine-edit" id='ctype-edit'>
+
+            <div class="heading-bar">
+              <h3>Cuisine Type:</h3>
+              <p>Please select what style or nationality of cuisine your venue provides</p>
+              <p class="vtvalidate1">*You must choose at least one cuisine type</p>
+            </div>
+            <div class="countries">
+              <div class="venuetype">
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/itilian.png' %}" alt=""> Italian Cuisine </label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/thai.png' %}" alt=""> Thai Cuisine </label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/indian.png' %}" alt=""> Indian Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining"> <label for=""> <img
+                      src="{% static 'images/flags/chinese.png' %}" alt=""> Chinese Cuisine </label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/greek.png' %}" alt=""> Greek Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/american.png' %}" alt=""> American Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/english.png' %}" alt=""> English Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/japenese.png' %}" alt=""> Japanese Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/vietnamese.png' %}" alt=""> Vietnamese Cuisine</label></div>
+                {% comment %} buttons {% endcomment %}
+              </div>
+              <div class="venuetype">
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/mexican.png' %}" alt=""> Mexican Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/french.png' %}" alt=""> French Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/spanish.png' %}" alt=""> Spanish Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/indonesian.png' %}" alt=""> Indonesian Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/philippines.png' %}" alt=""> Philippines Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/middle-east.png' %}" alt=""> Middle East Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/singapore.png' %}" alt=""> Singapore Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/australian.png' %}" alt=""> Australian Cuisine</label></div>
+                <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                      src="{% static 'images/flags/more.png' %}" alt=""> Other Cuisines</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="hours-op-edit" id='hrs-opera-edit'>
+            <div class="heading-bar">
+              <h3>Hours of operations:</h3>
+              <p>Please select your venue hours of operations</p>
+            </div>
+            <p class="hrsvalidate">*You must declare the Hours of Operations for each day of the week</p>
+            <div class="opnclose">
+              <h5>Open</h5>
+              <h5>Close</h5>
+            </div>
+            <div class="hrs-opera">
+              <div class="days" style="z-index:50">
+                <label for="monday" id="mon">Monday</label>
+                <select name="hrsfrm" id="hrsfrm" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrsto" required></select>
+              </div>
+              <div class="days" style="z-index:49">
+                <label for="tuesday" id="tue">Tuesday</label>
+                <select name="hrsfrm" id="hrsfrmTue" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoTue" required></select>
+              </div>
+              <div class="days" style="z-index:48">
+                <label for="wednesday" id="wed">Wednesday</label>
+                <select name="hrsfrm" id="hrsfrmWed" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoWed" required></select>
+              </div>
+              <div class="days" style="z-index:47">
+                <label for="thursday" id="thurs">Thursday</label>
+                <select name="hrsfrm" id="hrsfrmThurs" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoThurs" required></select>
+              </div>
+              <div class="days" style="z-index:46">
+                <label for="friday" id="fri">Friday</label>
+                <select name="hrsfrm" id="hrsfrmFri" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoFri" required></select>
+              </div>
+              <div class="days" style="z-index:45">
+                <label for="saturday" id="sat">Saturday</label>
+                <select name="hrsfrm" id="hrsfrmSat" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoSat" required></select>
+              </div>
+              <div class="days" style="z-index:44">
+                <label for="sunday" id="sun">Sunday</label>
+                <select name="hrsfrm" id="hrsfrmSun" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoSun" required></select>
+              </div>
+            </div>
+          </div>
+          <div class="hours-op-holiday-edit" id='hrs-operaholiday-edit'>
+            <div class="heading-bar">
+              <h3>Public Holiday Times of Operations:</h3>
+              <p>Please select your venue hours of operations on Public Holidays, you can change these times at anytime.</p>
+            </div>
+            <p class="hrsvalidate">*You must declare the Hours of Operations for each holiday</p>
+            <div class="opnclose">
+              <h5>Open</h5>
+              <h5>Close</h5>
+            </div>
+            <div class="hrs-opera">
+              <div class="days" style="z-index:50">
+
+                <label for="nyd" id="mon">New Year's Day</label>
+                <select name="hrsfrm" id="hrsfrmnyd" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstonyd" required></select>
+              </div>
+              <div class="days" style="z-index:49">
+                <label for="auday" id="tue">Australia Day</label>
+                <select name="hrsfrm" id="hrsfrmaud" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoaud" required></select>
+              </div>
+              <div class="days" style="z-index:50">
+                <label for="gday" id="wed">Good Friday</label>
+                <select name="hrsfrm" id="hrsfrmgday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstogday" required></select>
+              </div>
+              <div class="days" style="z-index:51">
+                <label for="Esat" id="thurs">Easter Saturday</label>
+                <select name="hrsfrm" id="hrsfrmesat" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoesat" required></select>
+              </div>
+              <div class="days" style="z-index:52">
+                <label for="Esun" id="fri">Easter Sunday</label>
+                <select name="hrsfrm" id="hrsfrmesun" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoesun" required></select>
+              </div>
+              <div class="days" style="z-index:53">
+                <label for="Emond" id="sat">Easter Monday</label>
+                <select name="hrsfrm" id="hrsfrmemon" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoemon" required></select>
+              </div>
+              <div class="days" style="z-index:54">
+                <label for="Anzday" id="sun">Anzac Day</label>
+                <select name="hrsfrm" id="hrsfrmanzday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoanzday" required></select>
+              </div>
+              <div class="days" style="z-index:55">
+                <label for="Kbday" id="sun">King's Birthday </label>
+                <select name="hrsfrm" id="hrsfrmkbday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstokbday" required></select>
+              </div>
+              <div class="days" style="z-index:56">
+                <label for="Labday" id="sun">Labour Day</label>
+                <select name="hrsfrm" id="hrsfrmlabday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstolabday" required></select>
+              </div>
+              <div class="days" style="z-index:57">
+                <label for="Showday" id="sun">Show Day</label>
+                <select name="hrsfrm" id="hrsfrmshowday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoshowday" required></select>
+              </div>
+              <div class="days" style="z-index:58">
+                <label for="Ceve" id="sun">Christmas Eve</label>
+                <select name="hrsfrm" id="hrsfrmceve" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstoceve" required></select>
+              </div>
+              <div class="days" style="z-index:59">
+                <label for="Cday" id="sun">Christmas Day</label>
+                <select name="hrsfrm" id="hrsfrmcday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstocday" required></select>
+              </div>
+              <div class="days" style="z-index:60">
+                <label for="Bday" id="sun">Boxing Day</label>
+                <select name="hrsfrm" id="hrsfrmbday" required></select>
+                <p>-</p>
+                <select name="hrsto" id="hrstobday" required></select>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-edit" id='cinfo-edit'>
+            <div class="heading-bar">
+              <h3>Contact Person Details:</h3>
+              <p>Please the details of the contact person </p>
+            </div>
+
+            <div class="vfields vfields-edit">
+              <label for="fm">First Name</label>
+              <input class="input-field" class="vaddrs1" id='fm' type="text" placeholder="Type First Name here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="ln"> Last Name</label>
+              <input class="input-field" class="vaddrs1" id='ln' type="text" placeholder="Type Last Name here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="ea">Email Address</label>
+              <input class="input-field" class="vaddrs1" id='ea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="cea">Confirm Email Address</label>
+              <input class="input-field" class="vaddrs1" id='cea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="">Cell Phone Number (Mobile)</label>
+              <input class="input-field" class="vaddrs1" id='cpn' type="number" placeholder="Type Phone Number here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="vepselect" id="veplabel"> Venue Employment Position</label>
+              <select name="Venue Employment Position" id='vep' required>
+                <option value="Owner">Owner</option>
+                <option value="Manager">Manager</option>
+                <option value="Marketing / Promotions Manager">Marketing / Promotions Manager</option>
+                <option value="Marketing Agent">Marketing Agent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div id="notify-method-edit">
+            <div id="wrapper">
+              <label for="notify_method">How would you like to be notified ?</label>
+              <div class="container">
+                <div class="selector">
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify1" name="notify_method" class="selector-item_radio" checked>
+                    <label for="notify1" class="selector-item_label" id="personyes">SMS</label>
+                  </div>
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify2" name="notify_method" class="selector-item_radio">
+                    <label for="notify2" class="selector-item_label" id="person-no">Email</label>
+                  </div>
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify3" name="notify_method" class="selector-item_radio">
+                    <label for="notify3" class="selector-item_label" id="person-no">Both</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-edit" id='cinfo-edit'>
+            <div class="heading-bar">
+              <h3>Contact Person Details:</h3>
+              <p>Please the details of the contact person </p>
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="fm">First Name</label>
+              <input class="input-field" class="vaddrs1" id='fm' type="text" placeholder="Type First Name here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="ln"> Last Name</label>
+              <input class="input-field" class="vaddrs1" id='ln' type="text" placeholder="Type Last Name here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="ea">Email Address</label>
+              <input class="input-field" class="vaddrs1" id='ea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="cea">Confirm Email Address</label>
+              <input class="input-field" class="vaddrs1" id='cea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="">Cell Phone Number (Mobile)</label>
+              <input class="input-field" class="vaddrs1" id='cpn' type="number" placeholder="Type Phone Number here.."
+                required />
+            </div>
+            <div class="vfields vfields-edit">
+              <label for="vepselect" id="veplabel"> Venue Employment Position</label>
+              <select name="Venue Employment Position" id='vep' required>
+                <option value="Owner">Owner</option>
+                <option value="Manager">Manager</option>
+                <option value="Marketing / Promotions Manager">Marketing / Promotions Manager</option>
+                <option value="Marketing Agent">Marketing Agent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div id="notify-method-edit">
+            <div id="wrapper">
+              <label for="notify_method">How would you like to be notified ?</label>
+              <div class="container">
+                <div class="selector">
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify4" name="notify_method1" class="selector-item_radio" checked>
+                    <label for="notify4" class="selector-item_label" id="personyes">SMS</label>
+                  </div>
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify5" name="notify_method1" class="selector-item_radio">
+                    <label for="notify5" class="selector-item_label" id="person-no">Email</label>
+                  </div>
+                  <div class="selecotr-item">
+                    <input type="radio" id="notify6" name="notify_method1" class="selector-item_radio">
+                    <label for="notify6" class="selector-item_label" id="person-no">Both</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="addmenu-items">
+        <form action="#" class="formMulti-step formMulti-step-edit add-menuitems" name="addmenuitems">
+          {% csrf_token %}
+          <div class="sec-title-two">
+            <h2 class="">Add menu items to the main menu</h2>
+            <p>Some description to explain the from below</p>
+          </div>
+          <div class="vfields menu ">
+            <label for="vepselect" id="veplabel"> Select Area of menu to be placed</label>
+            <select name="Venue Employment Position" id='vep' required>
+              <option value="Owner">Owner</option>
+              <option value="Manager">Manager</option>
+              <option value="Marketing / Promotions Manager">Marketing / Promotions Manager</option>
+              <option value="Marketing Agent">Marketing Agent</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="vfields menu">
+            <label for="vpn">Enter Menu Item Name</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="text" placeholder="Type Item Name here.."
+              required />
+          </div>
+          <div class="vfields menu">
+            <label for="vpn">Enter Food Description</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="text" placeholder="Type Description here.."
+              required />
+
+          </div>
+          <div class="vfields menu-select">
+            <label for="vpn">Spice level (if required)</label>
+            <div class=" label-check">
+              <div class=" cbox-row"><input type="checkbox" name="Mild" id="fd" required> <label for="fd">Mild</label>
+              </div>
+              <div class=" cbox-row"><input type="checkbox" name="Medium" id="cd" required> <label
+                  for="cd">Medium</label>
+              </div>
+              <div class="  cbox-row"><input type="checkbox" name="Hot" id="ff" required> <label for="ff">Hot</label>
+              </div>
+              <div class="cbox-row"><input type="checkbox" name="Extra Hot" id="hd" required> <label for="hd">Extra
+                  Hot</label></div>
+            </div>
+          </div>
+          <div class="vfields menu-select ">
+            <label for="vpn">Dish Sizes (if required)</label>
+            <div class=" label-check">
+              <div class=" cbox-row" style="margin: 0 0 0 -145px;">
+                <input type="checkbox" name="Mild" id="fd" required style="width: 7%;">
+
+                <label for="fd " style="width: 100%;">Both Entrée and Main prices required for this dish</label>
+              </div>
+            </div>
+          </div>
+          <div class="vfields menu-select ">
+            <label for="vpn">Dish portions (if required)</label>
+            <div class=" label-check">
+              <div class=" cbox-row" style="margin: 0 0 0 13px;">
+                <input type="checkbox" name="Mild" id="fd" required style="width: 7.5%">
+                <select name="portion" id="">
+                  <option value="1">1</option>
+                  <option value="1">2</option>
+                  <option value="1">3</option>
+                  <option value="1">4</option>
+                  <option value="1">5</option>
+                  <option value="1">6</option>
+                  <option value="1">7</option>
+                  <option value="1">8</option>
+                  <option value="1">9</option>
+                  <option value="1">10</option>
+                  <option value="1">11</option>
+                  <option value="1">12</option>
+                </select>
+                <label for="fd " style="width: 122%; margin: 0 0 0 -15px">Select the number of portions served in this
+                  dish (Example 4 X spring rolls)</label>
+              </div>
+            </div>
+          </div>
+          <div class="vfields menu-select">
+            <label for="vpn" style="min-width: 28.5%; max-width: 28.5%;">Allergy & Dietary specifications</label>
+            <div class="cboxinmultiplerows">
+              <div class=" label-check">
+                <div class=" cbox-row"><input type="checkbox" name="Mild" id="fd" required> <label for="fd">GF Gluten
+                    Free</label></div>
+                <div class=" cbox-row"><input type="checkbox" name="Medium" id="cd" required> <label for="cd">GFO
+                    Gluten Free option</label></div>
+                <div class="  cbox-row"><input type="checkbox" name="Hot" id="ff" required> <label for="ff">DF Dairy
+                    Free</label></div>
+                <div class="cbox-row"><input type="checkbox" name="Extra Hot" id="hd" required> <label for="hd">EF Egg
+                    Free</label></div>
+              </div>
+              <div class=" label-check">
+                <div class=" cbox-row"><input type="checkbox" name="Mild" id="fd" required> <label for="fd">VG
+                    Vegan</label></div>
+                <div class=" cbox-row"><input type="checkbox" name="Medium" id="cd" required> <label for="cd">VGO
+                    Vegan Option</label></div>
+                <div class="  cbox-row"><input type="checkbox" name="Hot" id="ff" required> <label for="ff">VE
+                    Vegetarian</label></div>
+                <div class="cbox-row"><input type="checkbox" name="Extra Hot" id="hd" required> <label for="hd">NF Nut
+                    Free</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="vfields menu">
+            <label for="vpn">Price</label>
+            <input class="input-field" id="map-search" class="controls" type="number" required
+              placeholder="Enter Item Price"> <br>
+          </div>
+          <div class="vfields menu">
+            <label for="vpn" style="height: 135px;
+              width: 28.7%;
+              margin: 0 16px 0 0;">Add Photograph of your dish Photograph should be 240 X 240 You can upload multiple
+              photographs if you wish
+            </label>
+            <input type="file" id="img" name="img" accept="image/*">
+          </div>
+          <div class="btns-group btn-color">
+            <a class="btn btn-prev ">Remove</a>
+            <a class="btn btn-next ">Save to menu</a>
+          </div>
+        </form>
+
+      </div>
+    </nav>
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+{% block script %}
+
+<!-- jequery plugins -->
+<script src="{% static 'js/jquery.js' %} "></script>
+<script src="{% static 'js/popper.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.min.js' %} "></script>
+<script src="{% static 'js/owl.js' %} "></script>
+<script src="{% static 'js/wow.js' %} "></script>
+<script src="{% static 'js/validation.js' %} "></script>
+<script src="{% static 'js/jquery.fancybox.js' %} "></script>
+<script src="{% static 'js/appear.js' %} "></script>
+<script src="{% static 'js/venue.js' %} " defer></script>
+<script src="{% static 'js/jquery.countTo.js' %} "></script>
+<script src="{% static 'js/scrollbar.js' %} "></script>
+<script src="{% static 'js/nav-tool.js' %} "></script>
+<script src="{% static 'js/TweenMax.min.js' %} "></script>
+<script src="{% static 'js/circle-progress.js' %} "></script>
+<script src="{% static 'js/rr.js' %} "></script>
+<script src="{% static 'js/countries.js' %} "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<!-- main-js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+<script src="{% static 'js/script.js' %} "></script>
+<!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&callback=initMap">
+</script> -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&libraries=places&callback=initialize"></script>
+<script>
+  var manualadrs = document.querySelector(".manualaddress");
+  var manualclose = document.querySelector(".addrschoice1");
+  var manualopen = document.querySelector(".addrschoice");
+
+  manualopen.addEventListener("click", () => {
+    manualadrs.style.display = 'flex';
+    manualopen.style.display = "none";
+    manualclose.style.display = "flex";
+  });
+
+
+  manualclose.addEventListener("click", () => {
+    manualclose.style.display = "none";
+    manualopen.style.display = "flex";
+    manualadrs.style.display = "none";
+  })
+
+  populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+  populateStates("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+  populateHrsfrm("hrsfrm");
+  populateHrsto("hrsto");
+  populateHrsfrm("hrsfrmTue");
+  populateHrsto("hrstoTue");
+  populateHrsfrm("hrsfrmWed");
+  populateHrsto("hrstoWed");
+  populateHrsfrm("hrsfrmThurs");
+  populateHrsto("hrstoThurs");
+  populateHrsfrm("hrsfrmFri");
+  populateHrsto("hrstoFri");
+  populateHrsfrm("hrsfrmSat");
+  populateHrsto("hrstoSat");
+  populateHrsfrm("hrsfrmSun");
+  populateHrsto("hrstoSun");
+  populateHrsfrm("hrsfrmnyd");
+  populateHrsto("hrstonyd");
+  populateHrsfrm("hrsfrmaud");
+  populateHrsto("hrstoaud");
+  populateHrsfrm("hrsfrmgday");
+  populateHrsto("hrstogday");
+  populateHrsfrm("hrsfrmesat");
+  populateHrsto("hrstoesat");
+  populateHrsfrm("hrsfrmesun");
+  populateHrsto("hrstoesun");
+  populateHrsfrm("hrsfrmemon");
+  populateHrsto("hrstoemon");
+  populateHrsfrm("hrsfrmanzday");
+  populateHrsto("hrstoanzday");
+  populateHrsfrm("hrsfrmkbday");
+  populateHrsto("hrstokbday");
+  populateHrsfrm("hrsfrmlabday");
+  populateHrsto("hrstolabday");
+  populateHrsfrm("hrsfrmshowday");
+  populateHrsto("hrstoshowday");
+  populateHrsfrm("hrsfrmceve");
+  populateHrsto("hrstoceve");
+  populateHrsfrm("hrsfrmcday");
+  populateHrsto("hrstocday");
+  populateHrsfrm("hrsfrmbday");
+  populateHrsto("hrstobday");
+</script>
+<script>
+
+ 
+  var menuedit = document.getElementsByClassName("menu-subtitle");
+  var mainmenuedit = document.getElementsByClassName("main-menu-edit");
+  var addmenuitemsform = document.getElementsByClassName("addmenu-items");
+  var selectsubtitle = document.getElementById("select-subtitle");
+  var memberhome = document.getElementsByClassName('memberhome');
+  var savesubmenu = document.getElementById("savesubmenu");
+  var mainmenu = document.getElementById('mainmenu123');
+  var additems = document.getElementById('additems1');
+  var sidebar = document.getElementsByClassName('components');
+  var venudetail = document.getElementsByClassName('venue-details');
+  var sidemenus = sidebar[0].getElementsByTagName('li');
+  var mainitems = document.getElementsByClassName("items")
+
+  for(let i=0; i < mainitems.length ; i++){
+    var anchor1 = mainitems[i].getElementsByTagName('a');
+    mainitems[i].addEventListener('click', () =>{
+      for(let i=0; i < mainitems.length ; i++){
+        var anchor2 = mainitems[i].getElementsByTagName('a');
+
+        if(anchor1 == anchor2){
+          console.log('true')
+        }
+        else
+        {
+          console.log(anchor2);
+          anchor2[0].setAttribute('aria-expanded', 'false');
+          // anchor2[0].add.classList = "collapsed";
+        }
+      }
+
+    })
+  }
+
+
+
+  console.log(mainitems);
+
+  sidemenus[0].addEventListener('click', () => {
+    memberhome[0].style.display = 'flex';
+    menuedit[0].style.display = "none";
+    addmenuitemsform[0].style.display = "none";
+    mainmenuedit[0].style.display = "none";
+    venudetail[0].style.display = "none";
+
+  })
+  sidemenus[29].addEventListener('click', () => {
+    memberhome[0].style.display = 'none';
+    menuedit[0].style.display = "none";
+    addmenuitemsform[0].style.display = "none";
+    mainmenuedit[0].style.display = "none";
+    venudetail[0].style.display = "flex";
+
+  })
+
+  for (let i = 0; i < sidemenus.length; i++) {
+
+  }
+
+  // click on create you sub-title side meny
+
+  console.log(selectsubtitle);
+  selectsubtitle.addEventListener("click", () => {
+    memberhome[0].style.display = "none";
+
+    menuedit[0].style.display = "flex";
+    addmenuitemsform[0].style.display = "none";
+    venudetail[0].style.display = "none";
+
+  })
+  //---------------------------------------------
+  // click on Save Submenu button in menu-subtitle section
+
+
+  // savesubmenu.addEventListener("click", () => {
+
+
+  //   })
+  //---------------------------------------------
+  // click on Main Menu in side menu bar
+
+
+  mainmenu.addEventListener("click", () => {
+
+    mainmenuedit[0].style.display = "flex";
+    memberhome[0].style.display = "none";
+    addmenuitemsform[0].style.display = "none";
+    menuedit[0].style.display = "none";
+    venudetail[0].style.display = "none";
+
+
+
+  })
+  //---------------------------------------------
+  // click on Main Menu in side menu bar
+
+
+  additems.addEventListener("click", () => {
+
+    mainmenuedit[0].style.display = "none";
+    addmenuitemsform[0].style.display = "flex";
+    menuedit[0].style.display = "none";
+    venudetail[0].style.display = "none";
+
+
+  })
+  //---------------------------------------------
+
+
+  // Drag n Drop side menus
+  
+
+  //-----------------------------------
+
+</script>
+
+
+
+</script>
+{% endblock %}

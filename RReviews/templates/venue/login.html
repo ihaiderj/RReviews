@@ -1,0 +1,139 @@
+{% extends 'about-1.html' %} {% load static %} {% load wagtailimages_tags %}
+
+{% block content %}
+
+<div class=" container-venue-login">
+  
+
+  <div class="manuallogin">
+    <h4>Please login to add / edit your menu and reviews
+    </h4>
+    <form action="contact.html" method="post" class="submit-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Username" required="" style="border: 2px solid darkgrey;">
+      </div>
+      <div class="form-group">
+        <input type="password" name="email" placeholder="Password" required="" style="border: 2px solid darkgrey; ">
+      </div>
+
+      <div class="form-group message-btn">
+        <button type="submit" class="theme-btn style-one">
+          Login
+        </button>
+      </div>
+
+    </form>
+    <div class="forgot">
+      <a href="#">Forgot Username / </a>
+      <a href="#">Forgot Password</a>
+    </div>
+  </div>
+
+  <div class="vl"></div>
+  <div class="sociallogin">
+    <div class="socialbutton">
+      <!--  -->
+      <label for="" class="loginsocial1">
+        <div class="icons"><img src="{% static 'images/icons/google-icon' %}" alt=""></div>Login with Google
+      </label>
+
+    </div>
+    <div class="socialbutton">
+      <!--  -->
+      <label for="" class="loginsocial1">
+        <div class="icons"><img src="{% static 'images/icons/facebook_circle_color-512.webp' %}" alt=""></div> Login
+        with
+        Facebook
+      </label>
+
+    </div>
+    <div class="socialbutton">
+      <!--  -->
+      <label for="" class="loginsocial1">
+        <div class="icons"><img src="{% static 'images/icons/twitter-icon.png' %}" alt=""> </div>Login with Twitter
+      </label>
+
+    </div>
+    <div class="socialbutton">
+      <!--  -->
+      <label for="" class="loginsocial1">
+        <div class="icons"><img src="{% static 'images/icons/insta-icon.png' %}" alt=""></div> Login with Instagram
+      </label>
+
+    </div>
+    <div class="socialbutton">
+      <!--  -->
+      <label for="" class="loginsocial1">
+        <div class="icons"><img src="{% static 'images/icons/apple-icon.webp' %}" alt=""></div>Login with Apple
+      </label>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block script %}
+
+<!-- jequery plugins -->
+<script src="{% static 'js/jquery.js' %} "></script>
+<script src="{% static 'js/popper.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.min.js' %} "></script>
+<script src="{% static 'js/owl.js' %} "></script>
+<script src="{% static 'js/wow.js' %} "></script>
+<script src="{% static 'js/validation.js' %} "></script>
+<script src="{% static 'js/jquery.fancybox.js' %} "></script>
+<script src="{% static 'js/appear.js' %} "></script>
+<script src="{% static 'js/venue.js' %} "></script>
+<script src="{% static 'js/jquery.countTo.js' %} "></script>
+<script src="{% static 'js/scrollbar.js' %} "></script>
+<script src="{% static 'js/nav-tool.js' %} "></script>
+<script src="{% static 'js/TweenMax.min.js' %} "></script>
+<script src="{% static 'js/circle-progress.js' %} "></script>
+<script src="{% static 'js/rr.js' %} "></script>
+<script src="{% static 'js/countries.js' %} "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<!-- main-js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+<script src="{% static 'js/script.js' %} ">  </script>
+<!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&callback=initMap">
+</script> -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&libraries=places&callback=initialize"></script>
+
+
+
+
+<!-- <script language="javascript">
+    populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+    populateStates("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+    populateHrsfrm("hrsfrm");
+    populateHrsto("hrsto");
+    populateHrsfrm("hrsfrmTue");
+    populateHrsto("hrstoTue");
+    populateHrsfrm("hrsfrmWed");
+    populateHrsto("hrstoWed");
+    populateHrsfrm("hrsfrmThurs");
+    populateHrsto("hrstoThurs");
+    populateHrsfrm("hrsfrmFri");
+    populateHrsto("hrstoFri");
+    populateHrsfrm("hrsfrmSat");
+    populateHrsto("hrstoSat");
+    populateHrsfrm("hrsfrmSun");
+    populateHrsto("hrstoSun");
+
+
+
+</script> -->
+
+
+
+
+
+{% endblock %}

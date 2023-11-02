@@ -1,0 +1,486 @@
+{% extends 'about-1.html' %} {% load static %} {% load wagtailimages_tags %}
+{% block content %}
+<section class="about-style-two about-page-1 bg-color-1 menu-page">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!-- <div class="col-lg-7 col-md-12 col-sm-12 content-column"> -->
+      <div id="content_block_three">
+        <div class="content-box">
+          <!-- <div class="sec-title right t1">
+            <h5>Restaurant Name</h5> 
+            <h2>Some statement can come here...</h2>
+          </div> -->
+
+          <div class="tabs-box">
+            <div class="tab-btn-box">
+              <ul class="tab-btns tab-buttons clearfix menutabs">
+                <li class="tab-btn active-btn" data-tab="#tab-1">BURGERS</li>
+                <li class="tab-btn" data-tab="#tab-2">PIZZAS</li>
+                <li class="tab-btn" data-tab="#tab-3">CHICKEN</li>
+                <li class="tab-btn" data-tab="#tab-4">BEVERAGES</li>
+                <li class="tab-btn" data-tab="#tab-5">COFFEE</li>
+               
+              </ul>
+            </div>
+            <div class="sec-title right" style="border-bottom: 1px solid #c3d8e9; padding-bottom: 20px;">
+              <!-- <h5>Menu</h5>  -->
+              <h2 id="menu-title">BURGERS</h2>
+            </div>
+            <div class="tabs-content">
+              <div class="tab active-tab" id="tab-1">
+                <div class="content-inner">
+                  <div class="auto-container">
+                    <div class="row clearfix">
+                      <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                          <div class="comments-area">
+
+                            <div class="comment-box">
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-burger1.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-burger2.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Breakfast Menu</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <!-- <span>Recommended</span> -->
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Breakfast Served 6am – 10:30am
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-burger3.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            <div class="tab" id="tab-2">
+              <div class="content-inner">
+                <div class="content-inner">
+                  <div class="auto-container">
+                    <div class="row clearfix">
+                      <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                          <div class="comments-area">
+
+                            <div class="comment-box">
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-pizzas1.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-pizzas2.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <!-- <span>Recommended</span> -->
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-pizzas3.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab" id="tab-3">
+              <div class="content-inner">
+                <div class="content-inner">
+                  <div class="auto-container">
+                    <div class="row clearfix">
+                      <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                          <div class="comments-area">
+
+                            <div class="comment-box">
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-chicken1.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-chicken2.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <!-- <span>Recommended</span> -->
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-chicken3.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab" id="tab-4">
+              <div class="content-inner">
+                <div class="content-inner">
+                  <div class="auto-container">
+                    <div class="row clearfix">
+                      <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                          <div class="comments-area">
+
+                            <div class="comment-box">
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-beverages1.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-beverages2.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <!-- <span>Recommended</span> -->
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-beverages3.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab" id="tab-5">
+              <div class="content-inner">
+                <div class="content-inner">
+                  <div class="auto-container">
+                    <div class="row clearfix">
+                      <div class="col-lg-9 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                          <div class="comments-area">
+
+                            <div class="comment-box">
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-coffee1.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-coffee2.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <!-- <span>Recommended</span> -->
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="comment">
+                                <figure class="thumb-box">
+                                  <img src="{% static 'images/menu/menu-coffee3.jpg' %}" alt="">
+                                </figure>
+                                <div class="comment-inner">
+                                  <div class="comment-info clearfix">
+                                    <div class="name pull-left">
+                                      <h5>Robert Gates</h5>
+                                    </div>
+                                    <div class="info pull-right">
+                                      <span>Recommended</span>
+                                      <a href="blog-details.html"><i class="fas fa-dollar"></i>$30</a>
+                                    </div>
+                                  </div>
+                                  <div class="text">
+                                    <p>Fugiat nulla pariatur excepteur sint occaecat cupidatat non proident, sunt in
+                                      culp qui officia deserunt mollit anim id est laborum sed unt perspiciatis unde
+                                      omnis iste.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  </div>
+</section>
+
+
+{% endblock %}
+
+{% block script %}
+
+<!-- jequery plugins -->
+<script src="{% static 'js/jquery.js' %} "></script>
+<script src="{% static 'js/popper.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.min.js' %} "></script>
+<script src="{% static 'js/owl.js' %} "></script>
+<script src="{% static 'js/wow.js' %} "></script>
+<script src="{% static 'js/validation.js' %} "></script>
+<script src="{% static 'js/jquery.fancybox.js' %} "></script>
+<script src="{% static 'js/appear.js' %} "></script>
+<script src="{% static 'js/venue.js' %} "></script>
+<script src="{% static 'js/jquery.countTo.js' %} "></script>
+<script src="{% static 'js/scrollbar.js' %} "></script>
+<script src="{% static 'js/nav-tool.js' %} "></script>
+<script src="{% static 'js/TweenMax.min.js' %} "></script>
+<script src="{% static 'js/circle-progress.js' %} "></script>
+<script src="{% static 'js/rr.js' %} "></script>
+<script src="{% static 'js/countries.js' %} "></script>
+
+
+<!-- main-js -->
+
+<script src="{% static 'js/script.js' %} "></script>
+
+<script>
+  
+</script>
+
+{% endblock %}

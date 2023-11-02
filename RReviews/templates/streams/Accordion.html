@@ -1,0 +1,107 @@
+{% load static %} {% load wagtailimages_tags %}
+
+
+
+<section style="margin-bottom: 40px">
+<div class="auto-container ">
+  <div class="service-details-content centred">
+  
+    <div class="sec-title right">
+      <h5>{{ self.Small_Heading }}</h5>
+      <h2>{{ self.Bold_Heading }}</h2>      
+      <p>{{ self.Paragraph }}</p>        
+    </div>
+        
+  </div>                    
+
+  
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseOne"
+          aria-expanded="true"
+          aria-controls="panelsStayOpen-collapseOne"
+          style = "  "
+        >
+          {{ self.First_Section_Title }}
+        </button>
+      </h2>
+      <div
+        id="panelsStayOpen-collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="panelsStayOpen-headingOne"
+      >
+        <div class="accordion-body textstyle"  style = "  font-size: 35px;  "> <p>{{ self.First_Section_Content_Text}} </p> </div>
+      </div>
+    </div>
+    {% for section in self.Sections %}
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#{{ section.Section_ID }}"
+          aria-expanded="false"
+          aria-controls="{{ section.Section_ID }}"
+          style = "  "
+        >
+          {{ section.Section_Title }}
+          
+        </button>
+      </h2>
+      <div
+        id="{{ section.Section_ID }}"
+        class="accordion-collapse collapse"        
+      >
+        <div class="accordion-body auto-container textstyle" style = "  font-size: 35px;  ">
+        <h2 style = " margin: 20px 20px " > {{ section.Section_Content_Heading}}</h2>    
+        {{ section.Section_Content_Text}} </div>
+        {% if section.Button_Page %}
+        <button type="button" class="accordion-content-button"> 
+          <a href="{{ section.Button_Page }}"><span>{{ section.Button_Text }}</span></a></div>
+          {% elif section.Button_Url %}
+          <button type="button" class="accordion-content-button"> 
+          <a href="{{ section.Button_Url }}"><span>{{ section.Button_Text  }}</span></a></div>
+          {% endif %}</button>
+      
+    </div>
+    {% endfor %}
+    
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+<script>
+  let x = document.querySelectorAll('.accordion-item')
+  console.log(x)  
+
+
+    // Getting the table element
+    var tables = document
+        .getElementsByTagName("table");
+
+    // Looping over tables
+    for (var i = 0; i < tables.length; i++) {
+
+        // Get the ith table
+        var table = tables[i];
+
+        // Set the id dynamically
+        table.setAttribute("id", i + 1);
+
+        // The line below will also give id
+        // dynamically to the tables
+        //table.id = i+1;
+    }
+
+
+</script>

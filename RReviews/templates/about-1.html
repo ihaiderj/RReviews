@@ -1,0 +1,581 @@
+{% load static %} {% load static wagtailuserbar %} {% load static wagtailuserbar menus_tags %}
+{% get_menu "main" as navigation %} {% load i18n wagtailcore_tags %} {% load wagtailimages_tags %}
+
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="{{ current_language_code }}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+
+
+    <title>Restaurant Reviews- {{ self.title }}</title>
+
+    <!-- Fav Icon -->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+    <script src="{% static 'js/javascript.js' %}"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="icon" href="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="script" />
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&display=swap" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+
+
+    <!-- Stylesheets -->
+
+    <link href="{% static '/css/flaticon.css' %}" rel="stylesheet" />
+    <link href="{% static '/css/font-awesome-all.css' %}" rel="stylesheet" />
+    <link href="{% static '/css/owl.css' %}" rel="stylesheet" />
+    <link href="{% static '/css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/nice-select.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/color.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/rtl.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" />
+    <link href="{% static 'css/tab_1.css' %}" />
+    <link href="{% static 'css/memberlogin.css'  %}" rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="{% static 'css/phone.css' %}" />
+    <link rel="icon" href="https://code.jquery.com/ui/1.11.2/jquery-ui.min.js" type="script" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+</head>
+
+<!-- page wrapper -->
+
+<body class="boxed_wrapper ltr">
+
+    <!-- Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader">
+            <div class="preloader-close">Preloader Close</div>
+        </div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>
+        <div class="layer layer-three"><span class="overlay"></span></div>
+    </div>
+
+
+
+
+    <!-- main header -->
+    <header class="main-header style-one style-six">
+        <div class="header-top">
+            <div class="auto-container">
+                <div class="top-inner clearfix">
+                    <div class="logo-box pull-left">
+                        {% image self.logo scale-4 as img %}
+                        <figure class="logo">
+                            <a href="/"><img src="{{ img.url }}" alt="{{ img.alt }}" /></a>
+                        </figure>
+                    </div>
+                    <div class="top-right pull-right">
+                        <ul class="social-links clearfix">
+                            {% if settings.site_settings.Socialmediasettings.facebook %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.facebook }}"><i
+                                        class="fab fa-facebook-f"></i></a>
+                            </li>
+                            {% endif %} {% if settings.site_settings.Socialmediasettings.twitter %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.twitter }}"><i
+                                        class="fab fa-twitter"></i></a>
+                            </li>
+                            {% endif %} {% if settings.site_settings.Socialmediasettings.youtube %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.youtube }}">
+                                    <i class="fab fa-youtube"></i></a>
+                            </li>
+                            {% endif %} {% if settings.site_settings.Socialmediasettings.googleplus %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.googleplus }}"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                            </li>
+                            {% endif %} {% if settings.site_settings.Socialmediasettings.linkedin %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.linkedin }}"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            {% endif %} {% if settings.site_settings.Socialmediasettings.instagram %}
+                            <li>
+                                <a href="{{ settings.site_settings.Socialmediasettings.instagram }}"><i
+                                        class="fab fa-instagram"></i></a>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-lower">
+            <div class="auto-container">
+                <div class="outer-box clearfix">
+                    <!-- <div class="logo-box pull-left">
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo-6.png" alt=""></a></figure>
+                    </div> -->
+                    <div class="menu-area pull-right">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler">
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                            <i class="icon-bar"></i>
+                        </div>
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li class="dropdown"><a href="/">Home</a>
+
+                                    </li>
+                                    {% for items in navigation.menu_items.all %}
+                                    <li class="dropdown">
+                                        <a href="{{ items.link }}">{{ items.title }}</a>
+                                        <ul>
+                                            {% for subitems in items.submenu_items.all %}
+                                            <li>
+                                                <a href="{{ subitems.link }}">{{ subitems.title }}</a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- <div class="menu-right-content clearfix">
+                            <div class="search-btn">
+                                <button type="button" class="search-toggler"><i class="flaticon-search-1"></i></button>
+                            </div>
+                            <div class="nav-btn nav-toggler navSidebar-button clearfix">
+                                <i class="fas fa-align-right"></i>
+                            </div>
+                            <div class="btn-box">
+                                <a href="about-1.html" class="theme-btn style-one">Free Estimate</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header">
+            <div class="auto-container">
+                <div class="outer-box clearfix">
+                    <div class="logo-box pull-left">
+                        {% image self.logo scale-4 as img %}
+                        <figure class="logo">
+                            <a href="index.html"><img src="{{ img.url }}" alt="{{ img.alt }}" /></a>
+                        </figure>
+                    </div>
+                    <div class="menu-area pull-right">
+                        <nav class="main-menu clearfix">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main-header end -->
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+            {% image self.logo scale-4 as img %}
+            <div class="nav-logo"><a href="/"><img src="{{ img.url }} " alt=" {{ img.alt }}" title=""></a></div>
+            <div class="menu-outer">
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="contact-info">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>{{ self.address }}</li>
+                    <li><a href="tel:+{{ self.support }}">{{ self.support }}</a></li>
+                    <li><a href="mailto:{{ self.email }}">{{ self.email }}</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <ul class="social-links clearfix">
+                    {% if settings.site_settings.Socialmediasettings.facebook %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.facebook }}"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </li>
+                    {% endif %} {% if settings.site_settings.Socialmediasettings.twitter %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.twitter }}"><i
+                                class="fab fa-twitter"></i></a>
+                    </li>
+                    {% endif %} {% if settings.site_settings.Socialmediasettings.youtube %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.youtube }}">
+                            <i class="fab fa-youtube"></i></a>
+                    </li>
+                    {% endif %} {% if settings.site_settings.Socialmediasettings.googleplus %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.googleplus }}"><i
+                                class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    {% endif %} {% if settings.site_settings.Socialmediasettings.linkedin %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.linkedin }}"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    {% endif %} {% if settings.site_settings.Socialmediasettings.instagram %}
+                    <li>
+                        <a href="{{ settings.site_settings.Socialmediasettings.instagram }}"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+
+    <!--Page Title-->
+    {% image self.bannerimage fill-1920x280 as img %}
+    <section class="page-title centred" style="background-image: url({{ img.url }});">
+        <div class="auto-container">
+            <div class="content-box clearfix">
+                <h1>{{ self.BannerTitle }}</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="/">Home</a></li>
+                    <li>{{ self.title }}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+
+    {% block content %}
+
+
+
+
+    {% endblock %}
+
+
+
+    <!-- main-footer -->
+    <footer class="main-footer alternet-2">
+        <div class="footer-top">
+            <div class="auto-container">
+                <div class="widget-section">
+                    <div class="row clearfix">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget logo-widget">
+                                {% image self.logo scale-4 as img %}
+                                <figure class="footer-logo"><a href="index.html"><img src="{{ img.url }} "
+                                            alt=" {{ img.alt }}"></a></figure>
+                                <div class="text">
+                                    <p>{{ self.para_under_logo }}</p>
+                                </div>
+                                <ul class="info-list clearfix">
+                                    <li><i class="fas fa-map-marker-alt"></i>{{ self.address }}</li>
+                                    <li><i class="fas fa-envelope"></i>Email <a href="{{ self.email }}">{{ self.email
+                                            }}</a></li>
+                                    <li><i class="fas fa-headphones"></i>Support <a href="{{ self.support }}">{{
+                                            self.support }}</a></li>
+                                </ul>
+                                <ul class="social-links clearfix">
+                                    {% if settings.site_settings.Socialmediasettings.facebook %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.facebook }}"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    {% endif %} {% if settings.site_settings.Socialmediasettings.twitter %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.twitter }}"><i
+                                                class="fab fa-twitter"></i></a>
+                                    </li>
+                                    {% endif %} {% if settings.site_settings.Socialmediasettings.youtube %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.youtube }}">
+                                            <i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    {% endif %} {% if settings.site_settings.Socialmediasettings.googleplus %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.googleplus }}"><i
+                                                class="fab fa-google-plus-g"></i></a>
+                                    </li>
+                                    {% endif %} {% if settings.site_settings.Socialmediasettings.linkedin %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.linkedin }}"><i
+                                                class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    {% endif %} {% if settings.site_settings.Socialmediasettings.instagram %}
+                                    <li>
+                                        <a href="{{ settings.site_settings.Socialmediasettings.instagram }}"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget ml-70">
+                                <div class="widget-title">
+                                    <h4>{{ self.footer_column_two }}</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+
+                                        <li class="dropdown"><a href="/">Home</a>
+
+                                        </li>
+                                        {% for items in navigation.menu_items.all %}
+                                        <li class="dropdown">
+                                            <a href="{{ items.link }}">{{ items.title }}</a>
+                                            <ul>
+                                                {% for subitems in items.submenu_items.all %}
+                                                <li>
+                                                    <a href="{{ subitems.link }}">{{ subitems.title }}</a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget links-widget">
+                                <div class="widget-title">
+                                    <h4>{{ self.footer_column_three }}</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list clearfix">
+                                        {% for items in navigation.menu_items.all %}
+                                        <li class="dropdown">
+                                            <a href="{{ items.link }}">{{ items.title }}</a>
+                                            <ul>
+                                                {% for subitems in items.submenu_items.all %}
+                                                <li>
+                                                    <a href="{{ subitems.link }}">{{ subitems.title }}</a>
+                                                </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                            <div class="footer-widget newsletter-widget">
+                                <div class="widget-title">
+                                    <h4>Newsletter</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <div class="text">
+                                        <p>Get in your inbox the latest News</p>
+                                    </div>
+                                    <form action="contact.html" method="post" class="newsletter-form">
+                                        <div class="form-group">
+                                            <i class="far fa-user"></i>
+                                            <input type="text" name="name" placeholder="Your Name" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <i class="far fa-envelope"></i>
+                                            <input type="email" name="email" placeholder="Email address" required="">
+                                        </div>
+                                        <div class="form-group message-btn">
+                                            <button class="theme-btn style-two" type="submit">subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright">
+                    <p>&copy; 2020 <a href="/">Restaurant Reviews</a> - Business & Consulting. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-arrow-up"></span>
+    </button>
+
+    <!-- sidebar cart item -->
+    <div class="xs-sidebar-group info-group info-sidebar">
+        <div class="xs-overlay xs-bg-black"></div>
+        <div class="xs-sidebar-widget">
+            <div class="sidebar-widget-container">
+                <div class="widget-heading">
+                    <a href="#" class="close-side-widget">X</a>
+                </div>
+                <div class="sidebar-textwidget">
+                    <div class="sidebar-info-contents">
+                        <div class="content-inner">
+                            <div class="upper-box">
+                                <div class="logo">
+                                    <a href="https://www.whoisfatema.com/"><img
+                                            src="{% static 'images/Whoisfatema.png' %}" alt="" /></a>
+                                </div>
+                                <!--<div class="text">-->
+                                <!--    <p>-->
+                                <!--        Exercitation ullamco laboris nis aliquip sed conseqrure-->
+                                <!--        dolorn repreh deris ptate velit ecepteur duis.-->
+                                <!--    </p>-->
+                                <!--</div>-->
+                            </div>
+                            <div class="side-menu-box">
+                                <div class="side-menu">
+                                    <nav class="menu-box">
+                                        <div class="menu-outer"></div>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="info-box">
+                                <!--<h3>Get in touch</h3>-->
+                                <ul class="info-list clearfix">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>{{ self.address }}
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope"></i><a href="mailto:{{ self.email }}>{{ self.email }}</a>
+                                    </li>
+                                    <li>
+                                        <i class=" fas fa-headphones-alt"></i><a href="tel:{{ self.support }}">{{
+                                                self.support }}</a>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-clock"></i>Monday to Friday: 9am - 6pm
+                                    </li>
+                                </ul>
+                                <form action="contact.html" method="post" class="subscribe-form">
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email address" required="" />
+                                        <button type="submit" class="theme-btn style-one">
+                                            subscribe now
+                                        </button>
+                                    </div>
+                                </form>
+                                <ul class="clearfix">
+                                    {% if settings.site_settings.SocialMediaSettings.facebook %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.facebook }}">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    {% endif %}
+                                    {% if settings.site_settings.SocialMediaSettings.twitter %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.twitter }}">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    {% endif %}
+                                    {% if settings.site_settings.SocialMediaSettings.youtube %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.youtube }}">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    {% endif %}
+
+                                    {% if settings.site_settings.SocialMediaSettings.youtube %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.linkedin }}">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+
+                                    {% endif %}
+                                    {% if settings.site_settings.SocialMediaSettings.youtube %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.pinterest }}">
+                                        <i class="fab fa-pinterest-p"></i>
+                                    </a>
+
+                                    {% endif %}
+                                    {% if settings.site_settings.SocialMediaSettings.youtube %}
+                                    <a href="{{ settings.site_settings.SocialMediaSettings.instagram }}">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+
+                                    {% endif %}
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END sidebar widget item -->
+
+    {% block script %}
+
+    <!-- jequery plugins -->
+    <script src="{% static 'js/popper.min.js' %} "></script>
+    <script src="{% static 'js/bootstrap.min.js' %} "></script>
+    <script src="{% static 'js/owl.js' %} "></script>
+    <script src="{% static 'js/wow.js' %} "></script>
+    <script src="{% static 'js/validation.js' %} "></script>
+    <script src="{% static 'js/jquery.fancybox.js' %} "></script>
+    <script src="{% static 'js/appear.js' %} "></script>
+    <script src="{% static 'js/venue.js' %} "></script>
+    <script src="{% static 'js/jquery.countTo.js' %} "></script>
+    <script src="{% static 'js/scrollbar.js' %} "></script>
+    <script src="{% static 'js/nav-tool.js' %} "></script>
+    <script src="{% static 'js/TweenMax.min.js' %} "></script>
+    <script src="{% static 'js/circle-progress.js' %} "></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %} "></script>
+    <script src="{% static 'js/rr.js' %} "></script>
+    <script src="{% static 'js/countries.js' %} "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- main-js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="{% static 'js/script.js' %} ">  </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&libraries=places&callback=initialize"></script>
+    <script src="{% static 'js/gmaps.js' %}"></script>
+    <script src="{% static 'js/map-helper.js' %}"></script>
+
+
+    <script language="javascript">
+        populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+
+    </script>
+
+
+    {% endblock %}
+
+</body>
+<!-- End of .page_wrapper -->
+
+</html>

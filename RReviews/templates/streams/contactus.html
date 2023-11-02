@@ -1,0 +1,51 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- contact-information -->
+<section class="contact-information centred" style="padding-bottom: 50px;">
+    <div class="auto-container">
+        <div class="sec-title right">
+            <h5>{{ self.custom_title }}</h5>
+            <h2>{{ self.Main_Heading }}</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                <div class="single-item wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="far fa-map"></i></div>
+                        <h3>Office Location</h3>
+                        <p style=" font-size:15px; text-align:center ">{{ self.Address1 }}<br />{{ self.Address2 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                <div class="single-item wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="fas fa-phone"></i></div>
+                        <h3>Calling Support</h3>
+                        <p style=" font-size:18px; text-align:center ">
+                            24/7 Line: <a href="tel:{{ self.Phone1 }}" style="text-style:bold">+91-
+                                {{ self.Phone1 }}</a>
+                        </p>
+                        <p style=" font-size:20px; text-align:center ">
+                            Toll Free: <a href="tel:{{ self.Phone2 }}" style="text-style:bold">+91-
+                                {{ self.Phone2 }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 single-column">
+                <div class="single-item wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="far fa-envelope-open"></i></div>
+                        <h3>Email Information</h3>
+                        <p style=" font-size:20px; text-align:center ">
+                            <a href="mailto:{{ self.Email1 }}">{{ self.Email1 }}</a><br /><a
+                                href="mailto:{{ self.Email2 }}">{{ self.Email2 }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-information end -->

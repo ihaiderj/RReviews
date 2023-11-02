@@ -1,0 +1,69 @@
+{% load static %} {% load wagtailimages_tags %}
+<div class="tab-container">
+  <div class="page">
+    {% if self.Block_Title %}
+    <h1>{{ self.Block_Title }}</h1>
+    {% endif %}
+    <!-- tabs -->
+    <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
+      <input
+        type="radio"
+        name="pcss3t"
+        checked
+        id="tab1"
+        class="tab-content-first"
+      />
+      <label for="tab1"
+        ><i class="icon-bolt"></i>{{ self.First_tab_Title }}</label
+      >
+      {% for tab in self.tabs %}
+      <input
+        type="radio"
+        name="pcss3t"
+        id="{{ tab.Tab_ID }}"
+        class="tab-content-2"
+      />
+      <label for="tab2"><i class="icon-picture"></i>{{ tab.Tab_Title }}</label>
+
+      {% endfor %}
+
+      <ul>
+        <li class="tab-content tab-content-first typography">
+          <h1>{{ self.First_Section_Content_Heading }}</h1>
+          <p>{{ self.First_Section_Content_Text }}</p>
+          <button type="button" class="tab-content-button">
+            {% if self.Button_Page %}
+            <a href="{{ self.Button_Page }}"
+              ><span>{{ self.Button_Text }}</span></a
+            >
+            {% elif self.Button_Url %}
+            <a href="{{ self.Button_Url }}"
+              ><span>{{ self.Button_Text }}</span></a
+            >
+            {% endif %}
+          </button>
+        </li>
+
+        {% for tab in self.tabs %}
+
+        <li class="tab-content tab-content-2 typography">
+          <h1>{{ tab.Section_Content_Heading }}</h1>
+          <p>{{ tab.Section_Content_Text }}</p>
+          <button type="button" class="tab-content-button">
+            {% if tab.Button_Page %}
+            <a href="{{ tab.Button_Page }}"
+              ><span>{{ tab.Button_Text }}</span></a
+            >
+            {% elif tab.Button_Url %}
+            <a href="{{ tab.Button_Url }}"
+              ><span>{{ tab.Button_Text }}</span></a
+            >
+            {% endif %}
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!--/ tabs -->
+  </div>
+</div>

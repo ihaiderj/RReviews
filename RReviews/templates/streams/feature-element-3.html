@@ -1,0 +1,47 @@
+{% load static %} {% load wagtailimages_tags %}
+<!-- feature-style-two -->
+<section class="feature-style-two">
+    <div class="auto-container">
+        {% if self.section_title %}
+        <h1 class="sec-title" style="text-align: center">
+            {{ self.section_title }}
+        </h1>
+        {% endif %}
+        <div class="
+        four-item-carousel
+        owl-carousel owl-theme owl-dots-none owl-nav-none
+      "> {% for card in self.cards %}
+            <div class="feature-block-two wow fadeInUp animated animated animated" data-wow-delay="00ms"
+                data-wow-duration="1500ms">
+                <div class="inner-box mb-70">
+                    {% image card.image fill-260x270 as img %}
+                    <figure class="image-box">
+                        <img src="{{ img.url }} " alt=" {{ img.alt }}" />
+                    </figure>
+                    <div class=" overlay-box">
+                        <p>
+                            {{ card.text_on_hover }}
+                        </p>
+                    </div>
+                    <div class="lower-content">
+                        <div class="inner">
+                            <h4>
+                                {% if card.button_page %}
+                                <a href="{{ card.button_page }}">{{ card.title }}</a>
+                                {% elif card.button_url %}
+                                <a href="{{ card.button_url }}">{{ card.title }}</a>
+                                {% endif %}
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    </div>
+
+</section>
+<!-- feature-style-two end -->

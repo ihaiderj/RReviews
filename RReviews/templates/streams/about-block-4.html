@@ -1,0 +1,91 @@
+{% load static %} {% load wagtailimages_tags %}
+<!-- about-style-four -->
+<section class="about-style-four">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+        <div id="content_block_13">
+          <div class="content-box">
+            <div class="sec-title style-four right">
+              <h5>{{ self.title1_small }}</h5>
+              <h2>{{ self.title2_bold }}</h2>
+            </div>
+            <div class="text">
+              <p>{{self.text }}</p>
+            </div>
+            <div class="progress-content">
+              {% if self.sub_title_1 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_1 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent1 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent1 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_2 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_2 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent2 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent2 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_3 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_3 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent3 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent3 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_4 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_4 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent4 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent4 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+        <div id="image_block_four">
+          <div class="image-box">
+            <div
+              class="pattern-layer"
+              style="background-image: url({% static 'images/shape/shape-23.png' %})"
+            ></div>
+
+            {% image self.image scale-100 as img %}
+            <figure
+              class="image wow slideInRight animated animated"
+              data-wow-delay="00ms"
+              data-wow-duration="1500ms"
+            >
+              <img src="{{ img.url }} " alt=" {{ img.alt }}"" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about-style-four end -->

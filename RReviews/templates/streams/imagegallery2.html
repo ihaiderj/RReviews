@@ -1,0 +1,33 @@
+{% load static %} {% load wagtailimages_tags %}
+<section class="project-style-four">
+        <div class="auto-container">
+            <div class="title-inner clearfix">
+                <div class="sec-title style-four right pull-left">
+                    <h5>{{ self.smallheading }}</h5>
+                    <h2>{{ self.biglheading }}</h2>
+                </div>
+               
+            </div>
+            <div class="two-column-carousel owl-carousel owl-theme owl-nav-none" style="padding=0px">
+                
+                {% for image in self.images %}
+                <div class="project-block-two">
+                    <div class="inner-box">
+                        
+                        {% image image.image fill-555x550 as img %}
+                        <figure class="image-box">
+                            <img src="{{ img.url }}" alt="{{ img.alt }}">
+                             <a
+                  href="{{ img.url }}"
+                  class="lightbox-image"
+                  data-fancybox="gallery"
+                  ><i class="flaticon-plus-1"></i
+                ></a>
+                        </figure>
+                    </div>
+               </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- project-style-four end -->

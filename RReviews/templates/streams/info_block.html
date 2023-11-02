@@ -1,0 +1,43 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- info-section -->
+<section class="info-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <div class="col-lg-7 col-md-12 col-sm-12 title-column">
+        <div class="title-inner">
+          <div class="year-box">
+            {% image self.image fill-500x300 as img %}
+            <figure>
+              <img src=" {{ img.url }} " alt="{{ img.alt }}" />
+            </figure>
+            {% comment %}
+            <h2>RR</h2>
+            <h3>Topper</h3>
+            {% endcomment %}
+          </div>
+          <div class="title">
+            <h2>{{ self.title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 col-sm-12 text-column">
+        <div class="text">
+          <p>{{ self.text}}</p>
+          {% if self.button_page %}
+          <a href="{{ self.button_page }}"
+            ><i class="fas fa-arrow-right"></i
+            ><span>{{ self.button_text }}</span></a
+          >
+          {% elif self.button_url %}
+          <a href="{{ self.button_url }}"
+            ><i class="fas fa-arrow-right"></i
+            ><span>{{ self.button_text }}</span></a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- info-section end -->

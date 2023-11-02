@@ -1,0 +1,56 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- news-section -->
+<section class="news-section bg-color-1">
+  <div class="auto-container">
+    {% if self.section_title %}
+    <h1 class="sec-title" style="text-align: center">
+      {{ self.section_title }}
+    </h1>
+    {% endif %}
+    <div
+      class="
+        three-item-carousel
+        owl-carousel owl-theme owl-dots-none owl-nav-none
+      "
+    >{% for card in self.cards %}
+      <div
+        class="news-block-one wow fadeInUp animated animated"
+        data-wow-delay="00ms"
+        data-wow-duration="1500ms"
+      >
+        
+        <div class="inner-box">
+          <figure class="image-box">
+            {% image card.image fill-360x280 as img %}
+            <a href="{{ card.button_url }}"
+              ><img src="{{ img.url }} " alt=" {{ img.alt }}"" /></a
+            >
+          </figure>
+          <div class="lower-content">
+            <h3>
+              <a href="{{ card.button_url }}">{{ card.title }}</a>
+            </h3>
+            <p>{{ card.text }}</p>
+            <div class="link">
+                {% if card.button_page %}
+                <a href="{{ card.button_page }}"><span>{{ card.button_text }}</span><i
+                        class="fas fa-arrow-right"></i></a></a>
+                {% elif card.button_url %}
+                <a href="{{ card.button_url }}"><span> {{ card.button_text }}</span><i
+                        class="fas fa-arrow-right"></i></a></a>
+                {% endif %}
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>{% endfor %}
+      
+      </div>
+     
+    </div>
+    
+  </div>
+</section>
+<!-- news-section end -->

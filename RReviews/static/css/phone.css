@@ -1,0 +1,118 @@
+.form-group {
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h-text {
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.h-text p {
+  padding-left: 00px;
+  padding-right: 10px;
+}
+.nice-select {
+  width: 80%;
+  margin-left: 0%;
+}
+
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+  z-index: 9;
+}
+
+.theme-btn.style-two {
+  margin-top: 0;
+}
+
+.clients-section {
+  margin-top: -100px;
+}
+
+#bannerheading {
+  position: relative;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
+  display: block;
+  color: white;
+  font-size: 55px;
+  line-height: 58px;
+  font-weight: 700;
+  top: 104px;
+}
+
+#banner-sub-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 17px;
+  color: #fff;
+  font-weight: 400;
+  margin-top: 118px;
+}
+
+.input-field {
+  width: 100%;
+
+  margin-left: -40px;
+}
+
+.SRLpostion {
+  width: 100%;
+  margin-left: 0%;
+}
+
+.SRLpostion .input-field {
+  width: 65%;
+
+  margin-right: 4.1%;
+}
+
+.SRLpostion .nice-select {
+  width: 24.5%;
+  margin-left: -14px;
+}
+
+.input-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.form-position .nice-select {
+  width: 90%;
+  margin-left: 0%;
+  margin-right: 0;
+}
+
+#RSearch2 {
+  width: 90%;
+  margin: 0px 0% 20px 0;
+}
+
+.RSDPosition {
+  width: 100%;
+}
+
+.theme-btn.style-two {
+  padding-left: 1pc;
+  padding-right: 1pc;
+}
+
+.RSDPosition .nice-select {
+  width: 67%;
+  margin-right: 1%;
+  margin-left: 0%;
+  padding-left: 10px;
+}

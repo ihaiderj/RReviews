@@ -1,0 +1,22 @@
+
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- view-plans -->
+    <section class="view-plans">
+        <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-8.png);"></div>
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-7.png);"></div>
+                <div class="text pull-left">
+                    <h5>{{ self.title }} (a.s)</h5>
+                    <h2>{{ self.text }}
+</h2>
+                    
+                </div>
+                <div class="btn-box pull-right">
+                    <a href="{{ self.page_url }}" class="theme-btn style-one">View All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- view-plans end -->

@@ -1,0 +1,188 @@
+{% load static %} {% load wagtailimages_tags %}
+<!-- pricing-section -->
+<section class="pricing-section" style="background-image: url(assets/images/background/pricing-bg.jpg);">
+    <div class="auto-container">
+        <!-- <div class="tabs-box">
+            <div class="upper-box">                
+                <div class="tab-btn-box">
+                    <ul class="tab-btns tab-buttons clearfix">
+                        <li class="tab-btn active-btn" data-tab="#tab-1">Monthly</li>
+                        <li class="tab-btn" data-tab="#tab-2">Yearly</li>
+                    </ul>
+                </div>
+            </div> -->
+            <div class="tabs-content">
+                <div class="tab active-tab" id="tab-1">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>{{ self.Plan1 }}</h3>
+                                        <div class="price-box">
+                                            <span>{{ self.Recommended_Plan1 }}</span>
+                                            <h2>${{ self.Price_Plan1 }}</h2>
+                                            <p>/ Month</p>
+                                        </div>
+                                        <span class="text">{{ self.Detail_Plan1 }}</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            {% for f in self.features_Plan1 %}
+                                            <li>{{ f.Feature }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="/">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one active-block">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>{{ self.Plan2 }} </h3>
+                                        <div class="price-box">
+                                            <span>{{ self.Recommended_Plan2 }}</span>
+                                            <h2>${{ self.Price_Plan2 }}</h2>
+                                            <p>/ Month</p>
+                                        </div>
+                                        <span class="text">{{ self.Detail_Plan2 }}</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            {% for f in self.features_Plan2 %}
+                                            <li>{{ f.Feature }}</li>
+                                            {% endfor %}
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="/">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>{{ self.Plan3}}</h3>
+                                        <div class="price-box">
+                                            <span>{{ self.Recommended_Plan3 }}</span>
+                                            <h2>${{ self.Price_Plan3 }}</h2>
+                                            <p>/ Month</p>
+                                        </div>
+                                        <span class="text">{{ self.Detail_Plan3 }}</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            {% for f in self.features_Plan3 %}
+                                            <li>{{ f.Feature }}</li>
+                                            {% endfor %}
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="/">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} <div class="tab" id="tab-2">
+                    <div class="row clearfix">
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>Small Plan</h3>
+                                        <div class="price-box">
+                                            <span>recommended</span>
+                                            <h2>$349</h2>
+                                            <p>/ Year</p>
+                                        </div>
+                                        <span class="text">This Plan Includes Global Relations</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            <li>All Financial Tasks</li>
+                                            <li>Economic Market Survey</li>
+                                            <li><del>Sales Operations</del></li>
+                                            <li><del>Auto Intelligence</del></li>
+                                            <li><del>24/7 Support</del></li>
+                                            <li><del>Technology Services</del></li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="index-3.html">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one active-block">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>Smart Plan</h3>
+                                        <div class="price-box">
+                                            <span>recommended</span>
+                                            <h2>$599</h2>
+                                            <p>/ Year</p>
+                                        </div>
+                                        <span class="text">This Plan Includes Financial Analysis</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            <li>All Financial Tasks</li>
+                                            <li>Economic Market Survey</li>
+                                            <li>Sales Operations</li>
+                                            <li>Auto Intelligence</li>
+                                            <li><del>24/7 Support</del></li>
+                                            <li><del>Technology Services</del></li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="index-3.html">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 pricing-block">
+                            <div class="pricing-block-one">
+                                <div class="pricing-table">
+                                    <div class="table-header">
+                                        <h3>Super Plan</h3>
+                                        <div class="price-box">
+                                            <span>recommended</span>
+                                            <h2>$749</h2>
+                                            <p>/ Year</p>
+                                        </div>
+                                        <span class="text">This Plan Includes Free Consultancy</span>
+                                    </div>
+                                    <div class="table-content">
+                                        <ul class="clearfix"> 
+                                            <li>All Financial Tasks</li>
+                                            <li>Economic Market Survey</li>
+                                            <li>Sales Operations</li>
+                                            <li>Auto Intelligence</li>
+                                            <li>24/7 Support</li>
+                                            <li>Technology Services</li>
+                                        </ul>
+                                    </div>
+                                    <div class="table-footer">
+                                        <a href="index-3.html">get started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- pricing-section end -->

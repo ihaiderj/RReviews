@@ -1,0 +1,15 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<div class="lightbox-gallery">
+    <div class="container1">
+        <div class="intro">
+            <h2 class="text-center">{{ self.Block_title }}</h2>
+            <p class="text-center">{{ self.description }}</p>
+        </div>
+        <div class="row photos">{% for image in self.images %} {% image image.Upload_Image scale-100 as img %}
+            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ img.url }}" data-lightbox="photos"><img
+                        class="img-fluid" src="{{ img.url }} " alt=" {{ img.alt }}"></a></div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

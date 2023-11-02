@@ -1,0 +1,47 @@
+{% load static %} {% load wagtailimages_tags %}
+
+ <!-- service-style-two -->
+ <section class="service-style-two bg-color-2">
+    <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-5.png);"></div>
+    <div class="auto-container">
+        <div class="sec-title light centred">
+            <h5>{{ self.Small_Heading}}</h5>
+            <h2>{{ self.Bold_Heading }}</h2>
+            <p>{{ self.Paragraph }}</p>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-two wow fadeInUp" data-wow-delay="00ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="{{ self.IconCode_for_Heading1 }}"></i></div>
+                        <h4><a href="index-2.html">{{ self.Heading1 }}</a></h4>
+                        <p>{{ self.Text_for_Heading1 }}</p>
+                        <div class="link"><a href="{{ self.Text_for_Heading1 }}"><i class="fas fa-arrow-right"></i><span>{{ self.Button_name }}</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-two wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="{{ self.IconCode_for_Heading2 }}"></i></div>
+                        <h4><a href="index-2.html">{{ self.Heading2 }}</a></h4>
+                        <p>{{ self.Text_for_Heading2 }}</p>
+                        <div class="link"><a href="{{ self.Text_for_Heading1 }}"><i class="fas fa-arrow-right"></i><span>{{ self.Button_name }}</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                <div class="service-block-two wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="{{ self.IconCode_for_Heading3 }}"></i></div>
+                        <h4><a href="index-2.html">{{ self.Heading3 }}</a></h4>
+                        <p>{{ self.Text_for_Heading3 }}</p>
+                        <div class="link"><a href="{{ self.Text_for_Heading1 }}"><i class="fas fa-arrow-right"></i><span>{{ self.Button_name }}</span></a></div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+<!-- service-style-two end -->

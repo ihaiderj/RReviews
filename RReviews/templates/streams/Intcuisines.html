@@ -1,0 +1,63 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<style>
+    {% for row in self.row1 %}
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" " }} {
+                background-image: url({{ img.url }});
+                }
+        {% image row.back_icon scale-100 as img %}
+            #{{ row.title|cut:" " }}:hover {
+            background-image: url({{ img.url }});
+            }
+    {% endfor %}
+    {% for row in self.row2 %}
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" " }} {
+                background-image: url({{ img.url }});
+                }
+        {% image row.back_icon scale-100 as img %}
+            #{{ row.title|cut:" " }}:hover {
+            background-image: url({{ img.url }});
+            }
+    {% endfor %}
+    {% for row in self.row3 %}
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" "}} {
+                background-image: url({{ img.url }});
+                }
+        {% image row.back_icon scale-100 as img %}
+            #{{ row.title|cut:" " }}:hover {
+            background-image: url({{ img.url }});
+            }
+    {% endfor %}
+</style>
+
+
+<div class="tilesmainbox" >    
+    {% for row in self.row1 %}
+    <div class="tilebox">
+        {% image row.front_icon scale-100 as img %}
+        <div class="subtile" id="{{ row.title|cut:" " }}" ></div>
+        <h5>{{ row.title }}</h5>
+    </div>
+    {% endfor %}
+</div>
+<div class="tilesmainbox" >    
+    {% for row in self.row2 %}
+    <div class="tilebox">
+        {% image row.front_icon scale-100 as img %}
+        <div class="subtile" id="{{ row.title|cut:" " }}" ></div>
+        <h5>{{ row.title }}</h5>
+    </div>
+    {% endfor %}
+</div>
+<div class="tilesmainbox" style="margin-bottom: 50px;" >    
+    {% for row in self.row3 %}
+    <div class="tilebox">
+        {% image row.front_icon scale-100 as img %}
+        <div class="subtile" id="{{ row.title|cut:" " }}" ></div>
+        <h5>{{ row.title }}</h5>
+    </div>
+    {% endfor %}
+</div>

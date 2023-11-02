@@ -1,0 +1,15 @@
+{% load static %} {% load wagtailimages_tags %}
+
+    <!-- video-section -->
+    {% image self.image scale-100 as img %}
+    <section class="video-section about-page-1 centred" style="background-image: url({{ img.url }});">
+        <div class="auto-container">
+            <div class="inner-box">
+                <div class="video-btn">
+                    <a href="{{ self.video_url }}" class="lightbox-image" data-caption=""><i class="fas fa-play"></i></a>
+                </div>
+                <h2>{{ self.title }}</h2>
+            </div>
+        </div>
+    </section>
+    <!-- video-section end -->

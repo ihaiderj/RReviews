@@ -1,0 +1,54 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<style>
+    {% for row in self.row1 %}
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" "|cut:"&" }} {
+                background-image: url({{ img.url }});
+                }
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" "|cut:"&" }}:hover {
+            background-image: url({{ img.url }});
+            -webkit-box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            -moz-box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            }
+    {% endfor %}
+    {% for row in self.row2 %}
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" "|cut:"&" }} {
+                background-image: url({{ img.url }});
+               
+                }
+        {% image row.front_icon scale-100 as img %}
+            #{{ row.title|cut:" "|cut:"&"}}:hover {
+            background-image: url({{ img.url }});
+            -webkit-box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            -moz-box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            box-shadow: 1px 1px 25px 2px rgba(247,255,0,1);
+            }
+    {% endfor %}
+    
+</style>
+
+
+<div class="tilesmainbox" >    
+    {% for row in self.row1 %}
+    <div class="tilebox">
+        {% image row.front_icon scale-100 as img %}
+        <div class="subtile" id="{{ row.title|cut:" "|cut:"&" }}" ></div>
+        <h5>{{ row.title }}</h5>
+    </div>
+    {% endfor %}
+</div>
+<div class="tilesmainbox" style="margin-bottom: 50px;" >    
+    {% for row in self.row2 %}
+    <div class="tilebox">
+        {% image row.front_icon scale-100 as img %}
+        <div class="subtile" id="{{ row.title|cut:" "|cut:"&" }}" ></div>
+        <h5>{{ row.title }}</h5>
+    </div>
+    {% endfor %}
+</div>
+
+</div>

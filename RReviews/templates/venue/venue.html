@@ -1,0 +1,644 @@
+{% extends 'about-1.html' %} {% load static %} {% load wagtailimages_tags %}
+
+
+{% block content %}
+
+<div class="multi-step">
+
+  <form action="#" class="formMulti-step" name="registervenue">
+    {% csrf_token %}
+
+    <!-- Progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="ms-tabs tabbtn ms-tabs-active" id="tab1">
+        <div class="progress-steponclick count"></div> <span>Register Venue</span>
+      </div>
+      <div class="ms-tabs tabbtn" id="tab2">
+        <div class="progress-step " id="count1"></div> <span>Venue Type</span>
+      </div>
+      <div class="ms-tabs tabbtn" id="tab3">
+        <div class="progress-step" id="count2"></div> <span>Cuisine Type</span>
+      </div>
+      <div class="ms-tabs tabbtn" id="tab4">
+        <div class="progress-step" id="count3"></div> <span>Hours of Operation</span>
+      </div>
+      <div class="ms-tabs tabbtn" id="tab5">
+        <div class="progress-step" id="count4"></div> <span>Contact Information</span>
+      </div>
+      <div class="ms-tabs tabbtn" id="tab6">
+        <div class="progress-step" id="count5"></div> <span>Username & Passwords</span>
+      </div>
+
+    </div>
+
+
+    <!-- Steps -->
+    <div class="form-step form-step-active" id='fs1'>
+      <div class="input-group ">
+        <div class="registervenue">
+          <h3>Register Your Restaurant / Venue Name</h3>
+          <p>Please enter the following information to claim online ownership of your venue.</p>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Name</label>
+            <input class="input-field" class="vaddrs1" id='vpn' type="text" placeholder="Type Venue Name here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Phone</label>
+            <input class="input-field" class="vaddrs1" id='vpn1' type="number" placeholder="Type Phone Number here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Website</label>
+            <input class="input-field" class="vaddrs1" id='vpn2' type="text" placeholder="Type Website Address here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Email</label>
+            <input class="input-field" class="vaddrs1" id='vpn3' type="email" placeholder="Type Email Address here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Venue Address</label>
+            <input class="input-field" id="map-search" class="controls" type="text" required
+              placeholder="Enter full Restaurant / Venue address here"> <br>
+          </div>
+          <label for="" class="data-format"><span style="color: green;">Address format:</span> Shop Number / Unit
+            Number
+            / Street Number, Street Name, City/Town Name, State, Country</label>
+
+          <div id="map"></div> <br>
+        </div>
+        <div class="addrschoice addrschoice-edit">
+          <label for="" class="data-format">If you are unable to locate your venue on Google Map, you can enter
+            Venue
+            Address manually by clicking</label>
+          <a class="btn" id="EMaddress">Enter Address Manually</a>
+        </div>
+        <div class="addrschoice1">
+
+          <a class="btn" id="EMaddress">Close</a>
+        </div>
+
+        <!-- Manual address block -->
+
+        <div class="manualaddress manualaddress-edit">
+          <div class="c0">
+            <input class="input-field" class="vaddrs" type="text" placeholder="Shop Number">
+            <input class="input-field" class="vaddrs" id="sn" type="text" required placeholder="Street Number"
+              value="Delhi, India">
+            <input class="input-field" class="vaddrs" type="text" required placeholder="Town Name">
+            <div class="vaddrsselect">
+              <select id="country" name="country" required style="height: 55px;"></select>
+            </div>
+            <!-- <input class="input-field"  class="vaddrs" type="number" required placeholder="Venue Phone Number"> -->
+
+            <!-- <input class="input-field"  class="vaddrs" type="text" placeholder="Website"> -->
+          </div>
+          <div class="c2" style="margin: 0px 0 0 -90px;">
+            <input class="input-field" class="vaddrs" type="text" placeholder="Unit Number">
+            <input class="input-field" class="vaddrs" type="text" placeholder="Street Name" required>
+            <div class="vaddrsselect">
+              <select name="state" id="state" required style="height: 55px;"></select>
+            </div>
+            <input class="input-field" class="vaddrs" type="text" placeholder="Postal Code/ Zip Code" required>
+            <!-- <input class="input-field"  class="vaddrs" type="number" placeholder="Alternative Number"> -->
+          </div>
+        </div>
+
+      </div>
+      <div class=" btns-group btn-color ">
+        <a class="btn btn-next tab-btns tab-btns " id="next1" style="margin: 0 0 0 90%;">Next</a>
+      </div>
+    </div>
+    <div class="form-step" id='fs2'>
+      <div class="input-group">
+        <h3>Restaurant / Venue Type</h3>
+        <p>Please select what style of Restaurant / Venue that your registering</p>
+        <p class="vtvalidate">* You must choose at least one type of venue</p>
+        <div class="venuetype1">
+          <div class="v-type"><input type="checkbox" name="Fine Dining" id="fd" required> <label for="fd">Fine
+              Dining</label></div>
+          <div class="v-type"><input type="checkbox" name="Casual Dining" id="cd" required> <label for="cd">Casual
+              Dining</label></div>
+          <div class="v-type"><input type="checkbox" name="Family Friendly" id="ff" required> <label for="ff">Family
+              Friendly(Children Welcome)</label></div>
+          <div class="v-type"><input type="checkbox" name="Healthy Food" id="hd" required> <label for="hd">Healthy Food
+              Options(catering for vegetarians, vegans, gluten free etc..)</label></div>
+          <div class="v-type"><input type="checkbox" name="Fast Food" id="ffood" required> <label for="ffood">Fast
+              Food</label></div>
+          <div class="v-type"><input type="checkbox" name="Take Away" id="ta" required> <label for="ta">Takeaway
+              Available</label></div>
+          <div class="v-type"><input type="checkbox" name="CafeCoffee" id="ccoffee" required> <label for="ccoffee">Cafés
+              & Coffee Shops</label>
+          </div>
+        </div>
+        <div class="btns-group btn-color">
+          <a class="btn btn-prev tab-btns" id="prev1">Previous</a>
+          <a class="btn btn-next tab-btns" id="next2">Next</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-step" id='fs3'>
+      <div class="input-group">
+        <h3>Cuisine Type</h3>
+        <p>Please select what style or nationality of cuisine your venue provides</p>
+        <p class="vtvalidate1">*You must choose at least one cuisine type</p>
+        <div class="countries">
+          <div class="venuetype">
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/itilian.png' %}" alt=""> Italian Cuisine </label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/thai.png' %}" alt=""> Thai Cuisine </label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/indian.png' %}" alt=""> Indian Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining"> <label for=""> <img
+                  src="{% static 'images/flags/chinese.png' %}" alt=""> Chinese Cuisine </label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/greek.png' %}" alt=""> Greek Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/american.png' %}" alt=""> American Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/english.png' %}" alt=""> English Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/japenese.png' %}" alt=""> Japanese Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/vietnamese.png' %}" alt=""> Vietnamese Cuisine</label></div>
+            {% comment %} buttons {% endcomment %}
+          </div>
+          <div class="venuetype">
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/mexican.png' %}" alt=""> Mexican Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/french.png' %}" alt=""> French Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/spanish.png' %}" alt=""> Spanish Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/indonesian.png' %}" alt=""> Indonesian Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/philippines.png' %}" alt=""> Philippines Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/middle-east.png' %}" alt=""> Middle East Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/singapore.png' %}" alt=""> Singapore Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/australian.png' %}" alt=""> Australian Cuisine</label></div>
+            <div class="c-type"><input type="checkbox" name="Fine Dining" required> <label for=""> <img
+                  src="{% static 'images/flags/more.png' %}" alt=""> Other Cuisines</label></div>
+
+          </div>
+
+        </div>
+        <div class="btns-group btn-color">
+          <a class="btn btn-prev tab-btns" id="prev2">Previous</a>
+          <a class="btn btn-next tab-btns" id="next3">Next</a>
+        </div>
+      </div>
+    </div>
+    <div class="form-step" id='fs4'>
+
+      <div class="input-group">
+        <h3>Hours of operations</h3>
+        <p>Please select your venue hours of operations</p>
+        <p class="hrsvalidate">*You must declare the hours of operation for each day of the week</p>
+        <div class="opnclose">
+          <h5>Open</h5>
+          <h5>Close</h5>
+        </div>
+
+        <div class="hrs-opera">
+          <div class="days" style="z-index:50">
+
+            <label for="monday" id="mon">Monday</label>
+            <select name="hrsfrm" id="hrsfrm" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrsto" required></select>
+          </div>
+          <div class="days" style="z-index:49">
+            <label for="tuesday" id="tue">Tuesday</label>
+            <select name="hrsfrm" id="hrsfrmTue" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoTue" required></select>
+          </div>
+          <div class="days" style="z-index:48">
+            <label for="wednesday" id="wed">Wednesday</label>
+            <select name="hrsfrm" id="hrsfrmWed" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoWed" required></select>
+          </div>
+          <div class="days" style="z-index:47">
+            <label for="thursday" id="thurs">Thursday</label>
+            <select name="hrsfrm" id="hrsfrmThurs" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoThurs" required></select>
+          </div>
+          <div class="days" style="z-index:46">
+            <label for="friday" id="fri">Friday</label>
+            <select name="hrsfrm" id="hrsfrmFri" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoFri" required></select>
+          </div>
+          <div class="days" style="z-index:45">
+            <label for="saturday" id="sat">Saturday</label>
+            <select name="hrsfrm" id="hrsfrmSat" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoSat" required></select>
+          </div>
+          <div class="days" style="z-index:44">
+            <label for="sunday" id="sun">Sunday</label>
+            <select name="hrsfrm" id="hrsfrmSun" required></select>
+            <p>-</p>
+            <select name="hrsto" id="hrstoSun" required></select>
+          </div>
+        </div>
+
+        <!-- Public Holidays Hours of Operations-->
+
+        <div class="hours-op-holiday" id='hrs-operaholiday'>
+          <div class="heading-bar">
+            <h3>Public Holiday Times of Operations:</h3>
+            <p>Please select your venue hours of operations on Public Holidays, you can change these times at anytime.
+            </p>
+          </div>
+          <p class="hrsvalidate">*You must declare the Hours of Operations for each holiday</p>
+          <div class="opnclose">
+            <h5>Open</h5>
+            <h5>Close</h5>
+          </div>
+          <div class="hrs-opera">
+            <div class="days" style="z-index:50">
+
+              <label for="nyd" id="mon">New Year's Day</label>
+              <select name="hrsfrm" id="hrsfrmnyd" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstonyd" required></select>
+            </div>
+            <div class="days" style="z-index:49">
+              <label for="auday" id="tue">Australia Day</label>
+              <select name="hrsfrm" id="hrsfrmaud" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoaud" required></select>
+            </div>
+            <div class="days" style="z-index:50">
+              <label for="gday" id="wed">Good Friday</label>
+              <select name="hrsfrm" id="hrsfrmgday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstogday" required></select>
+            </div>
+            <div class="days" style="z-index:51">
+              <label for="Esat" id="thurs">Easter Saturday</label>
+              <select name="hrsfrm" id="hrsfrmesat" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoesat" required></select>
+            </div>
+            <div class="days" style="z-index:52">
+              <label for="Esun" id="fri">Easter Sunday</label>
+              <select name="hrsfrm" id="hrsfrmesun" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoesun" required></select>
+            </div>
+            <div class="days" style="z-index:53">
+              <label for="Emond" id="sat">Easter Monday</label>
+              <select name="hrsfrm" id="hrsfrmemon" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoemon" required></select>
+            </div>
+            <div class="days" style="z-index:54">
+              <label for="Anzday" id="sun">Anzac Day</label>
+              <select name="hrsfrm" id="hrsfrmanzday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoanzday" required></select>
+            </div>
+            <div class="days" style="z-index:55">
+              <label for="Kbday" id="sun">King's Birthday </label>
+              <select name="hrsfrm" id="hrsfrmkbday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstokbday" required></select>
+            </div>
+            <div class="days" style="z-index:56">
+              <label for="Labday" id="sun">Labour Day</label>
+              <select name="hrsfrm" id="hrsfrmlabday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstolabday" required></select>
+            </div>
+            <div class="days" style="z-index:57">
+              <label for="Showday" id="sun">Show Day</label>
+              <select name="hrsfrm" id="hrsfrmshowday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoshowday" required></select>
+            </div>
+            <div class="days" style="z-index:58">
+              <label for="Ceve" id="sun">Christmas Eve</label>
+              <select name="hrsfrm" id="hrsfrmceve" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstoceve" required></select>
+            </div>
+            <div class="days" style="z-index:59">
+              <label for="Cday" id="sun">Christmas Day</label>
+              <select name="hrsfrm" id="hrsfrmcday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstocday" required></select>
+            </div>
+            <div class="days" style="z-index:60">
+              <label for="Bday" id="sun">Boxing Day</label>
+              <select name="hrsfrm" id="hrsfrmbday" required></select>
+              <p>-</p>
+              <select name="hrsto" id="hrstobday" required></select>
+            </div>
+          </div>
+        </div>
+
+        {% comment %} buttons {% endcomment %}
+        <div class="btns-group btn-color">
+          <a class="btn btn-prev tab-btns" id="prev3">Previous</a>
+          <a class="btn btn-next tab-btns" id="next4">Next</a>
+
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="form-step" id='fs5'>
+      <div class="input-group">
+        <div class='venuefields1' id='vfields'>
+          <h3>Register Your Contact Information</h3>
+          <p>Please enter the following information to claim online ownership of your venue.</p>
+          <div class="c1">
+            <div class="vfields">
+              <label for="fm">First Name</label>
+              <input class="input-field" class="vaddrs1" id='fm' type="text" placeholder="Type First Name here.."
+                required />
+            </div>
+            <div class="vfields">
+              <label for="ln"> Last Name</label>
+              <input class="input-field" class="vaddrs1" id='ln' type="text" placeholder="Type Last Name here.."
+                required />
+            </div>
+            <div class="vfields">
+              <label for="ea">Email Address</label>
+              <input class="input-field" class="vaddrs1" id='ea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+            <div class="vfields">
+              <label for="cea">Confirm Email Address</label>
+              <input class="input-field" class="vaddrs1" id='cea' type="email" placeholder="Type Email Address here.."
+                required />
+            </div>
+
+            <div class="vfields">
+              <label for="">Cell Phone Number (Mobile)</label>
+              <input class="input-field" class="vaddrs1" id='cpn' type="number" placeholder="Type Phone Number here.."
+                required />
+            </div>
+            <div class="vfields">
+              <label for="vepselect" id="veplabel"> Venue Employment Position</label>
+              <select name="Venue Employment Position" id='vep' required>
+                <option value="Owner">Owner</option>
+                <option value="Manager">Manager</option>
+                <option value="Marketing / Promotions Manager">Marketing / Promotions Manager</option>
+                <option value="Marketing Agent">Marketing Agent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="add-per">
+        <h3>Add details of additional person/staff for notifications</h3>
+        <div class='additional-person venuefields1'>
+          <div class="c1">
+            <div class="vfields">
+              <label for="apfn">First Name</label>
+              <input class="input-field" id="apfn" type="text" placeholder="Type First Name here" />
+            </div>
+            <div class="vfields">
+              <label for="apfm">Last Name</label>
+              <input class="input-field" id="apln" type="text" placeholder="Type Last Name here" />
+            </div>
+            <div class="vfields">
+              <label for="apfm">Email Address</label>
+              <input class="input-field" id="apea" type="email" placeholder="Type Email Address here" />
+            </div>
+            <div class="vfields">
+              <label for="apfm">Confirm Email Address</label>
+              <input class="input-field" id="apcea" type="email" placeholder="Type Email Address here" />
+            </div>
+            <div class="vfields">
+              <label for="apfm">Cell Phone Number</label>
+              <input class="input-field" id="apcpn" type="number" placeholder="Type Phone Number here" />
+            </div>
+            <div class="vfields">
+              <label for="apvep" id="veplabel"> Venue Employment Position</label>
+              <select name="Venue Employment Position" id='apvep'>
+                <option value="Owner">Owner</option>
+                <option value="Manager">Manager</option>
+                <option value="Marketing / Promotions Manager">Marketing / Promotions Manager</option>
+                <option value="Marketing Agent">Marketing Agent</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notify-container">
+        <div id="wrappershow">
+          <div>
+            <label for="yes_no_radio">Is this the person that should be notified when a review is placed ?
+            </label>
+          </div>
+          <div class="container">
+            <div class="selector">
+              <div class="selecotr-item">
+                <input type="radio" id="radio1" name="selector" class="selector-item_radio">
+                <label for="radio1" class="selector-item_label" id="personyes">Yes</label>
+              </div>
+              <div class="selecotr-item">
+                <input type="radio" id="radio2" name="selector" class="selector-item_radio">
+                <label for="radio2" class="selector-item_label" id="person-no">No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p id="nominatemsg"> “ Please nominate a person to receive notifications when a review is posted about your
+          venue”
+        </p>
+        <div id="notify-method">
+          <div id="wrapper">
+            <label for="notify_method">How would you like to be notified ?</label>
+          </div>
+          <div class="container">
+            <div class="selector">
+              <div class="selecotr-item">
+                <input type="radio" id="notify1" name="notify_method" class="selector-item_radio" checked>
+                <label for="notify1" class="selector-item_label" id="personyes">SMS</label>
+              </div>
+              <div class="selecotr-item">
+                <input type="radio" id="notify2" name="notify_method" class="selector-item_radio">
+                <label for="notify2" class="selector-item_label" id="person-no">Email</label>
+              </div>
+              <div class="selecotr-item">
+                <input type="radio" id="notify3" name="notify_method" class="selector-item_radio">
+                <label for="notify3" class="selector-item_label" id="person-no">Both</label>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="wrappershow1">
+          <div>
+            <label for="add_yes_no" id="add-person">Would you like to add an additional person to receive notifications
+              when
+              a review is posted?</label>
+          </div>
+          <div class="container">
+            <div class="selector">
+              <div class="selecotr-item">
+                <input type="radio" id="y1" name="add_yes_no" class="selector-item_radio">
+                <label for="y1" class="selector-item_label">Yes</label>
+              </div>
+              <div class="selecotr-item">
+                <input type="radio" id="n1" name="add_yes_no" class="selector-item_radio">
+                <label for="n1" class="selector-item_label">No</label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="note"> *Please note that SMS/Text Messages incur a $0.50 fee.</p>
+      <div class="btns-group btn-color">
+        <a class="btn btn-prev tab-btns" id="prev4">Previous</a>
+        <a class="btn btn-next tab-btns" id="next5">Next</a>
+      </div>
+
+    </div>
+    <div class="form-step" id='fs6'>
+      <div class="input-group ">
+        <h3>Select Your Username & Password</h3>
+        <p>Please select a username and password to access your venues online profile.
+          An email will be sent to your nominated email address for verification.</p>
+        <div class="userpass">
+          <div class="vfields vfields-edit">
+            <label for="vpn">Select Login Name</label>
+            <input class="input-field" class="vaddrs1" id='vusername' type="text" placeholder="Type Login Name here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Nominated Email Address</label>
+            <input class="input-field" class="vaddrs1" id='vemail' type="text" placeholder="Type Email Address here.."
+              required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Select Password</label>
+            <input class="input-field" class="vaddrs1" id='vpass1' type="password"
+              placeholder="Please enter a password for your business.." required />
+          </div>
+          <div class="vfields vfields-edit">
+            <label for="vpn">Confirm Password</label>
+            <input class="input-field" class="vaddrs1" id='vpass2' type="password"
+              placeholder="Please re-enter your password for confirmation.." required />
+          </div>
+
+        </div>
+      </div>
+      <div class="btns-group btn-color">
+        <a class="btn btn-prev tab-btns" id="prev5">Previous</a>
+        <input type="submit" value="Submit" class="btn tab-btns" id="subsave">
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+{% endblock %}
+
+
+{% block script %}
+
+<!-- jequery plugins -->
+<script src="{% static 'js/jquery.js' %} "></script>
+<script src="{% static 'js/popper.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.min.js' %} "></script>
+<script src="{% static 'js/owl.js' %} "></script>
+<script src="{% static 'js/wow.js' %} "></script>
+<script src="{% static 'js/validation.js' %} "></script>
+<script src="{% static 'js/jquery.fancybox.js' %} "></script>
+<script src="{% static 'js/appear.js' %} "></script>
+<script src="{% static 'js/venue.js' %} "></script>
+<script src="{% static 'js/jquery.countTo.js' %} "></script>
+<script src="{% static 'js/scrollbar.js' %} "></script>
+<script src="{% static 'js/nav-tool.js' %} "></script>
+<script src="{% static 'js/TweenMax.min.js' %} "></script>
+<script src="{% static 'js/circle-progress.js' %} "></script>
+<script src="{% static 'js/rr.js' %} "></script>
+<script src="{% static 'js/countries.js' %} "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+<!-- main-js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+<script src="{% static 'js/script.js' %} ">  </script>
+<!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&callback=initMap">
+</script> -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNo6TNAgBz0O1FpxILMNHCA5EwxF7DLh4&libraries=places&callback=initialize"></script>
+
+
+
+
+<script language="javascript">
+  populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+  populateStates("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+  populateHrsfrm("hrsfrm");
+  populateHrsto("hrsto");
+  populateHrsfrm("hrsfrmTue");
+  populateHrsto("hrstoTue");
+  populateHrsfrm("hrsfrmWed");
+  populateHrsto("hrstoWed");
+  populateHrsfrm("hrsfrmThurs");
+  populateHrsto("hrstoThurs");
+  populateHrsfrm("hrsfrmFri");
+  populateHrsto("hrstoFri");
+  populateHrsfrm("hrsfrmSat");
+  populateHrsto("hrstoSat");
+  populateHrsfrm("hrsfrmSun");
+  populateHrsto("hrstoSun");
+  populateholiHrsfrm("hrsfrmnyd");
+  populateholiHrsto("hrstonyd");
+  populateholiHrsfrm("hrsfrmaud");
+  populateholiHrsto("hrstoaud");
+  populateholiHrsfrm("hrsfrmgday");
+  populateholiHrsto("hrstogday");
+  populateholiHrsfrm("hrsfrmesat");
+  populateholiHrsto("hrstoesat");
+  populateholiHrsfrm("hrsfrmesun");
+  populateholiHrsto("hrstoesun");
+  populateholiHrsfrm("hrsfrmemon");
+  populateholiHrsto("hrstoemon");
+  populateholiHrsfrm("hrsfrmanzday");
+  populateholiHrsto("hrstoanzday");
+  populateholiHrsfrm("hrsfrmkbday");
+  populateholiHrsto("hrstokbday");
+  populateholiHrsfrm("hrsfrmlabday");
+  populateholiHrsto("hrstolabday");
+  populateholiHrsfrm("hrsfrmshowday");
+  populateholiHrsto("hrstoshowday");
+  populateholiHrsfrm("hrsfrmceve");
+  populateholiHrsto("hrstoceve");
+  populateholiHrsfrm("hrsfrmcday");
+  populateholiHrsto("hrstocday");
+  populateholiHrsfrm("hrsfrmbday");
+  populateholiHrsto("hrstobday");
+
+
+
+</script>
+
+
+{% endblock %}

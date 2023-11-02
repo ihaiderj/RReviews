@@ -1,0 +1,96 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- our-mission -->
+<section class="our-mission bg-color-1">
+    <div
+        class="pattern-layer"
+        style="background-image: url({% static 'images/shape/shape-6.png' %})"
+      ></div>  
+      
+    <div class="auto-container">
+       
+      <div class="row clearfix">
+        <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+          <div id="content_block_four">
+            <div class="content-box">
+              <div class="tabs-box">
+                <div class="tab-btn-box">
+                  <ul class="tab-btns tab-buttons clearfix">
+                    <li class="tab-btn active-btn" data-tab="#tab-1">
+                      {{ self.Tab1 }}
+                    </li>
+                    <li class="tab-btn" data-tab="#tab-2">{{ self.Tab2 }}</li>
+                    <li class="tab-btn" data-tab="#tab-3">{{ self.Tab3 }}</li>
+                  </ul>
+                </div>
+                <div class="tabs-content">
+                  <div class="tab active-tab" id="tab-1">
+                    <div class="content-inner">
+                      <h3>{{ self.Heading_tab1 }}</h3>
+                      <p>
+                        {{ self.Paragraph_tab1 }}
+                      </p>
+                      <ul class="list-item clearfix">
+                        <li>{{ self.Bulletone_tab1 }}</li>
+                        <li>{{ self.Bullettwo_tab1 }}</li>
+                        <li>{{ self.Bulletthree_tab1 }}</li>
+                        <li>{{ self.Bulletfour_tab1 }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab" id="tab-2">
+                    <div class="content-inner">
+                      <h3>{{ self.Heading_tab2 }}</h3>
+                      <p>
+                        {{ self.Paragraph_tab2 }}
+                      </p>
+                      <ul class="list-item clearfix">
+                        <li>{{ self.Bulletone_tab2 }}</li>
+                        <li>{{ self.Bullettwo_tab2 }}</li>
+                        <li>{{ self.Bulletthree_tab2 }}</li>
+                        <li>{{ self.Bulletfour_tab2 }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab" id="tab-3">
+                    <div class="content-inner">
+                      <h3>{{ self.Heading_tab3 }}</h3>
+                      <p>
+                        {{ self.Paragraph_tab3 }}
+                      </p>
+                      <ul class="list-item clearfix">
+                        <li>{{ self.Bulletone_tab3 }}</li>
+                        <li>{{ self.Bullettwo_tab3 }}</li>
+                        <li>{{ self.Bulletthree_tab3 }}</li>
+                        <li>{{ self.Bulletfour_tab3 }}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 video-column">
+          <div id="video_block_one">
+            <div class="video-inner">
+                {% image self.image_left scale-100 as img %}
+              <figure class="image-box">
+
+                <img src="{{ img.url }} " alt=" {{ img.alt }}"/>
+              </figure>
+              <div class="video-btn">
+                <a
+                  href="{{ self.video_url }}"
+                  class="lightbox-image"
+                  data-caption=""
+                  ><i class="fas fa-play"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- our-mission end -->

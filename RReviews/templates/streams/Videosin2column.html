@@ -1,0 +1,51 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- Videosin2colums starts -->
+
+<section class="about-style-three">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+        <div id="content_block_ten">
+          <div class="content-box">
+            <div class="sec-title-two">
+              <h3>{{ self.title1_bold }}</h3>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="{{ self.video_url1 }}"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+        <div id="content_block_ten">
+          <div class="content-box">
+            <div class="sec-title-two">
+              <h3>{{ self.title2_bold }}</h3>
+            </div>
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="{{ self.video_url2 }}"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Videosin2colums end -->

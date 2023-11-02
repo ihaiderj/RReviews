@@ -1,0 +1,47 @@
+{% load static %} 
+{% load wagtailimages_tags %}
+
+<form action="" class="form-position">
+  <div class="input-icons">
+    <i class="fa fa-search icon"></i>
+    <input class="input-field" id="RSearch" type="text" placeholder="Type to Search-----OR" />
+  </div>
+
+  <div class="form-group1">
+    <div class="SRLpostion">
+
+      <input class="input-field" id="RSearch1" type="text" placeholder="Search Restaurant Location" />
+
+      <select name="Search Radius" id="R-Location">
+        <option value="15kms">15 Kms</option>
+        <option value="30kms">30Kms</option>
+        <option value="mercedes">50Kms</option>
+        <option value="audi">70Kms</option>
+        <option value="audi">100Kms</option>
+        <option value="audi">All Over Australia</option>
+      </select>
+
+    </div>
+    <select name="Restaurant-type" id="R-Type">
+      <option value="volvo"><span>Search for Restaurant Type</span></option>
+      <option value="saab">Fine Dinning</option>
+      <option value="mercedes">Casual Dinning</option>
+      <option value="audi">Contemorary Casual</option>
+      <option value="audi">Family Style</option>
+      <option value="audi">Fast Casual</option>
+      <option value="audi">Fast Food</option>
+      <option value="audi">Cafe</option>
+      <option value="audi">Buffet</option>
+    </select>
+    <input class="input-field" id="RSearch2" type="text" placeholder="Todays Local Specials" />
+    <div class="RSDPosition">
+      <select name="Favourite-Dish" id="R-FavDish">
+        <option value="volvo">Search for your Favourite Dish</option>
+        <option value="saab">Melborne</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <button type="submit" class="theme-btn style-two">Search</button>
+    </div>
+  </div>
+</form>

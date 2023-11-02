@@ -1,0 +1,261 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Restaurant Reviews</title>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'comingsoon_01/images/icons/favicon.ico' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/vendor/bootstrap/css/bootstrap.min.css' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/vendor/animate/animate.css' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/vendor/select2/select2.min.css' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/css/util.css' %}"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'comingsoon_01/css/main.css' %}"
+    />
+
+    <!--===============================================================================================-->
+
+    <style>
+      input,
+      textarea,
+      label {
+        display: block;
+
+        outline: none;
+
+        border: 1px solid green;
+
+        background: white;
+
+        margin: 5px;
+
+        padding: 10px;
+
+        border-radius: 15px;
+      }
+
+      .p-b-36 {
+        padding-bottom: 5px;
+      }
+
+      .size4 {
+        width: 60%;
+
+        height: 50px;
+
+        cursor: pointer;
+      }
+
+      .p-t-50 {
+        padding-top: 35px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="size1 bg0 where1-parent">
+      <!-- Coutdown -->
+
+      <div
+        class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2"
+        style="
+          background-image: url('{% static 'comingsoon_01/images/icons/img16..jpg' %}');
+        "
+      >
+        <div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 days">90</span>
+
+            <span class="s2-txt4">Days</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 hours">24</span>
+
+            <span class="s2-txt4">Hours</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 minutes">60</span>
+
+            <span class="s2-txt4">Minutes</span>
+          </div>
+
+          <div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+            <span class="l2-txt1 p-b-9 seconds">60</span>
+
+            <span class="s2-txt4">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+
+      <div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+        <div class="wrap-pic1">
+          <img
+            src="{% static 'comingsoon_01/images/icons/logo_yellow_1.png' %}"
+            alt="LOGO"
+          />
+        </div>
+
+        <div class="p-t-50 p-b-60">
+          <p class="m1-txt1 p-b-36">
+            <span class="m1-txt2">Coming Soon</span> <br />Developers & Testers
+            Login
+          </p>
+          {% block content %}
+
+          {% if form.errors %}
+          <p>Your username and password didn't match. Please try again.</p>
+          {% endif %}
+          
+          {% if next %}
+              {% if user.is_authenticated %}
+              <p>Your account doesn't have access to this page. To proceed,
+              please login with an account that has access.</p>
+              {% else %}
+              <p>Please login to see this page.</p>
+              {% endif %}
+          {% endif %}
+          
+          <form method="post" action="/en/_util/login/">
+          {% csrf_token %}
+          <table>
+          <tr>
+              <td>{{ form.username.label_tag }}</td>
+              <td>{{ form.username }}</td>
+          </tr>
+          <tr>
+              <td>{{ form.password.label_tag }}</td>
+              <td>{{ form.password }}</td>
+          </tr>
+          </table>
+          
+          <input type="submit" value="login">
+          <input type="hidden" name="next" value="{{ next }}">
+          </form>
+                  
+          
+          {% endblock %}
+         
+         
+      </div>
+    </div>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'comingsoon_01/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'comingsoon_01/vendor/bootstrap/js/popper.js' %}"></script>
+
+    <script src="{% static 'comingsoon_01/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'comingsoon_01/vendor/select2/select2.min.js' %}"></script>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'vendor/countdowntime/moment.min.js' %}"></script>
+
+    <script src="{% static 'comingsoon_01/vendor/countdowntime/moment-timezone.min.js' %}"></script>
+
+    <script src="{% static 'comingsoon_01/vendor/countdowntime/moment-timezone-with-data.min.js' %}"></script>
+
+    <script src="{% static 'comingsoon_01/vendor/countdowntime/countdowntime.js' %}"></script>
+
+    <script>
+      $(".cd100").countdown100({
+        /*Set Endtime here*/
+
+        /*Endtime must be > current time*/
+
+        endtimeYear: 2022,
+
+        endtimeMonth: 4,
+
+        endtimeDate: 25,
+
+        endtimeHours: 24,
+
+        endtimeMinutes: 0,
+
+        endtimeSeconds: 0,
+
+        timeZone: "",
+
+        // ex:  timeZone: "America/New_York"
+
+        //go to " http://momentjs.com/timezone/ " to get timezone
+      });
+    </script>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'comingsoon_01/vendor/tilt/tilt.jquery.min.js' %}"></script>
+
+    <script>
+      $(".js-tilt").tilt({
+        scale: 1.1,
+      });
+    </script>
+
+    <!--===============================================================================================-->
+
+    <script src="{% static 'comingsoon_01/js/main.js' %}"></script>
+  </body>
+</html>

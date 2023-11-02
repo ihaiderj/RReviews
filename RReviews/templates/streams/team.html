@@ -1,0 +1,51 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- team-section -->
+<section class="team-section about-page-1">
+    <div class="auto-container">
+        <div class="title-box">
+            <div class="row clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-12 title-column">
+                    <div class="sec-title right">
+                        <h5>{{ self.Small_Heading }}</h5>
+                        <h2>{{ self.Bold_Heading }}</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                    <div class="text">
+                        <p>{{ self.Paragraph }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="four-item-carousel owl-carousel owl-theme owl-nav-none owl-dot-style-one">
+            {% for member in self.members %}
+            <div class="team-block-one">
+                <div class="inner-box">
+                    {% image member.Pic scale-100 as img %}
+                    <figure class="image-box"><img src="{{ img.url }} " alt=" {{ img.alt }}"></figure>
+                    <div class="lower-content">
+                        <div class="content-box">
+                            <h3><a href="#">{{ member.Name }}</a></h3>
+                            <span class="designation">{{ member.Designation }}</span>
+                        </div>
+                        <div class="ovellay-box">
+                            <h3><a href="#">{{ member.Name }}</a></h3>
+                            <span class="designation">{{ member.Designation }}</span>
+                            <ul class="social-links clearfix">
+                                <li><a href="{{ member.FB_Profile }}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{ member.Twitter_Profile }}"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{{ member.Instagram_Profile }}"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{{ member.LinkedIn_Profile }}"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+       
+    </div>
+</section>
+<!-- team-section end -->

@@ -1,0 +1,232 @@
+{% load static %} {% load wagtailimages_tags %}
+
+{% if self.preview %}
+
+    <!-- service-section -->
+    <section class="service-section">
+        <div class="auto-container">
+            <div class="title-box">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-6 col-sm-12 title-column">
+                        <div class="sec-title right">
+                            <h5>What we provides</h5>
+                            <h2>Get Exceptional <br />Service For Growth</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                        <div class="text">
+                            <p>Tempor incididunt ut labore et dolore magna aliquat enim veniam quis nostrud exercitation ullamco laboris nis aliquip consequat duis aute irure dolor voluptate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inner-content">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="planning-strategies.html">Planning Strategies</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-rocket"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="planning-strategies.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="financial-analysis.html">Financial Advices</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-innovation-1"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="financial-analysis.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="investment-trading.html">Manage Investment</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-presentation"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="investment-trading.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="investment-trading.html">Process Development</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-target"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="investment-trading.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="wealth-marketing.html">Wealth Marketing</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-idea"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="wealth-marketing.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <h4><a href="taxation-planning.html">Business Tax Reforms</a></h4>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="flaticon-search"></i></div>
+                                    <p>Acepteur sintas haecat sed non dui proident sunt culpa sed ipsum tempor.</p>
+                                    <a href="taxation-planning.html"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service-section end -->
+{% else %}
+
+<!-- service-section -->
+<section class="service-section">
+    <div class="auto-container">
+        <div class="title-box">
+            <div class="row clearfix">
+                <div class="col-lg-6 col-md-6 col-sm-12 title-column">
+                    <div class="sec-title right">
+                        <h5>{{ self.Small_Heading}}</h5>
+                        <h2>{{ self.Bold_Heading }}</h2>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                    <div class="text">
+                        <p>{{ self.Paragraph }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-content">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading1 }}">{{ self.Heading1 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading1 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading1 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-rocket"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading1 }}</p>
+                                <a href="{{ self.button_url_for_heading1 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading2 }}">{{ self.Heading2 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading2 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading2 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-innovation-1"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading2 }}</p>
+                                <a href="{{ self.button_url_for_heading2 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading3 }}">{{ self.Heading3 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading3 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading3 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-presentation"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading3 }}</p>
+                                <a href="{{ self.button_url_for_heading3 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading4 }}">{{ self.Heading4 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading4 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading4 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-target"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading4 }}</p>
+                                <a href="{{ self.button_url_for_heading4 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading5 }}">{{ self.Heading5 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading5 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading5 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-idea"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading5 }}</p>
+                                <a href="{{ self.button_url_for_heading5 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                    <div class="service-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <h4><a href="{{ self.button_url_for_heading6 }}">{{ self.Heading6 }}</a></h4>
+                            <div class="inner">
+                                {% if self.IconCode_for_Heading6 %}
+                                <div class="icon-box"><i class="{{ self.IconCode_for_Heading6 }}></i></div>
+                                {% else %}
+                                <div class="icon-box"><i class="flaticon-search"></i></div>
+                                {% endif %}
+
+                                <p>{{ self.Text_for_Heading6 }}</p>
+                                <a href="{{ self.button_url_for_heading6 }}"><i class="fas fa-arrow-right"></i><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- service-section end -->
+{% endif %}

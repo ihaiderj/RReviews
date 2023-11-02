@@ -1,0 +1,87 @@
+ {% load static %} {% load wagtailimages_tags %}
+ <!-- skills-section -->
+ <section class="skills-section">
+    <div class="auto-container">
+        <div class="row align-items-center clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                <div class="image-box">
+                    <div class="anim-icon">
+                        <div class="icon icon-1" style="background-image: url({% static 'images/icons/anim-icon-2.png' %});"></div>
+                    </div>
+                    {% image self.image scale-100 as img %}
+                    <figure class="image wow slideInLeft" data-wow-delay="00ms" data-wow-duration="1500ms"><img src="{{ img.url }} " alt=" {{ img.alt }}"></figure>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                <div id="content_block_13">
+                    <div class="content-box">
+                        <div class="anim-icon">
+                            <div class="icon icon-1 rotate-me" style="background-image: url({% static 'images/icons/anim-icon-1.png' %});"></div>
+                            <div class="icon icon-2 float-bob-y" style="background-image: url({% static 'images/icons/anim-icon-3.png' %});"></div>
+                        </div>
+                        <div class="sec-title-two">
+                            <h5>{{ self.title1_small }}</h5>
+                            <h2>{{ self.title2_bold }}</h2>
+                        </div>
+                        <div class="text">
+                            <p>{{self.text }}</p>
+                        </div>
+                        <div class="progress-content">
+                            <h5>{{ self.title3}}</h5>
+                            {% if self.sub_title_1 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_1 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent1 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent1 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_2 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_2 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent2 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent2 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_3 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_3 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent3 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent3 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+              {% if self.sub_title_4 %}
+              <div class="progress-box">
+                <p>{{ self.sub_title_4 }}</p>
+                <div class="bar">
+                  <div
+                    class="bar-inner count-bar"
+                    data-percent="{{ self.percent4 }}%"
+                  ></div>
+                  <span class="count-text">{{ self.percent4 }}%</span>
+                </div>
+              </div>
+              {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- skills-section end -->

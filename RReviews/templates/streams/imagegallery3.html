@@ -1,0 +1,65 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- project-style-three -->
+<section class="project-style-three centred">
+  <div class="auto-container">
+    <div class="sec-title-two">
+      <h2>{{ self.Block_title }}</h2>
+    </div>
+    
+    
+    
+    <div class="sortable-masonry">
+      <div class="filters">
+        <ul class="filter-tabs filter-btns centred clearfix">
+            {% for gal in self.gallery %}
+          <li class="active filter" data-role="button" data-filter=".{{ gal.gallerytitle }}">
+            {{ gal.gallerytitle}}
+          </li>
+            {% endfor %}
+        </ul>
+      </div>
+      <div class="items-container row clearfix">
+        <div
+          class="
+            col-lg-3 col-md-6 col-sm-12
+            masonry-item
+            small-column
+            all
+            planning
+            consulting
+            startups
+          "
+        >
+          <div class="project-block-two">
+            <div class="inner-box">
+                {% for gal in self.gallery %}
+              <figure class="image-box">
+                   {% image gal.image scale-100 as img %}
+                <img src="{{ img.url }}" alt="" />
+                <a
+                  href="{{ img.url }}"
+                  class="lightbox-image"
+                  data-fancybox="gallery"
+                  ><i class="flaticon-plus-1"></i
+                ></a>
+              </figure>
+              
+              <div class="content-box">
+                <h5>{{ gal.Description }}</h5>
+                <a href="{{ gal.page_url }}">{{ gal.gallerytitle }}</a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+    <!--<div class="more-btn">-->
+    <!--  <a href="index-4.html" class="theme-btn"-->
+    <!--    ><i class="flaticon-waiting"></i>Load More</a-->
+    <!--  >-->
+    <!--</div>-->
+  </div>
+</section>
+<!-- project-style-three end -->

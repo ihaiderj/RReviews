@@ -1,0 +1,157 @@
+<div class="content">
+    <!-- Nav pills -->
+    <ul class="nav nav-pills" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="pill" href="#login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="pill" href="#regis">Register</a>
+      </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="login" class="container tab-pane active">
+        <form>
+          <div class="form-group1">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input
+              type="email"
+              class="form-control is-valid"
+              id="exampleFormControlInput1"
+              placeholder="name@example.com"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group1">
+            <label for="exampleInputPassword1">Password</label>
+            <input
+              type="password"
+              class="form-control is-invalid"
+              id="exampleInputPassword1"
+              placeholder="Password"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >Password incorrect.</small
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div id="regis" class="container tab-pane fade">
+        <form>
+          <div class="form-group1">
+            <label for="InputName">Full Name</label>
+            <input
+              type="text"
+              class="form-control is-valid"
+              id="InputName"
+              placeholder="Full Name"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group1">
+            <label for="InputUsername">Username</label>
+            <input
+              type="text"
+              class="form-control is-valid"
+              id="InputUsername"
+              placeholder="Username"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group1">
+            <label for="exampleFormControlInput2">Email address</label>
+            <input
+              type="email"
+              class="form-control is-valid"
+              id="exampleFormControlInput2"
+              placeholder="name@example.com"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >We'll never share your email with anyone else.</small
+            >
+          </div>
+          <div class="form-group1">
+            <label for="exampleInputPassword2">Password</label>
+            <input
+              type="password"
+              class="form-control is-invalid"
+              id="exampleInputPassword2"
+              placeholder="Password"
+            />
+            <small id="emailHelp" class="form-text text-muted"
+              >Password incorrect.</small
+            >
+          </div>
+          <div class="form-group1">
+            <label for="exampleInputPasswordVer">Verify Password</label>
+            <input
+              type="password"
+              class="form-control is-invalid"
+              id="exampleInputPasswordVer"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+.pcss3t-theme-1 > input:checked + label {
+    margin-bottom: 0;
+    padding-bottom: 1
+px
+;
+    border-bottom-right-radius: 2;
+    border-bottom-left-radius: 2;
+    color: #063c83;
+    opacity: 1;
+    font-size: 17px;
+}
+.pcss3t-theme-1 > label {
+    margin: 0 5px 5px 0;
+    border-radius: 15px;
+    background: #ffc107;
+    box-shadow: 0 2px rgb(0 0 0 / 20%);
+    color: #000000;
+    opacity: 0.8;
+    font-size: 17px;
+}
+
+.tab-container h1 {
+    padding: 40px 0 20px;
+    font: 40px/60px Gabriela, Georgia, serif;
+    text-align: center;
+    text-shadow: 0px 0px rgb(0 0 0 / 10%);
+    color: #063c83;
+}
+
+.pcss3t > .tab-content-first:checked ~ ul .tab-content-first, .pcss3t > .tab-content-2:checked ~ ul .tab-content-2, .pcss3t > .tab-content-3:checked ~ ul .tab-content-3, .pcss3t > .tab-content-4:checked ~ ul .tab-content-4, .pcss3t > .tab-content-5:checked ~ ul .tab-content-5, .pcss3t > .tab-content-6:checked ~ ul .tab-content-6, .pcss3t > .tab-content-7:checked ~ ul .tab-content-7, .pcss3t > .tab-content-8:checked ~ ul .tab-content-8, .pcss3t > .tab-content-9:checked ~ ul .tab-content-9, .pcss3t > .tab-content-last:checked ~ ul .tab-content-last {
+    z-index: 129;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    -webkit-transform: rotate(0deg);
+    width: 998px; 
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    height: 800px;
+}
+
+.tab-container .page {
+    position: relative;
+    max-width: 1150px;
+    margin: 20px 10px 20px 120px;
+    padding: 0 20px 40px;
+    height: 1050px;
+}

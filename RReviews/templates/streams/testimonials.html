@@ -1,0 +1,29 @@
+{% load static %} {% load wagtailimages_tags %}
+  <!-- testimonial-style-two -->
+  <section class="testimonial-style-two alterner-2 bg-color-1">
+    <div class="auto-container">
+        <div class="sec-title style-four centred">
+            <h5>{{ self.title}}</h5>
+            <h2>{{ self.Bold_Heading }}</h2>
+        </div>
+        <div class="three-item-carousel owl-carousel owl-theme owl-nav-none owl-dot-style-one">
+            {% for testimonial in self.testimonials %}
+            <div class="testimonial-content">
+                <div class="inner-box">
+                    <div class="text">
+                        <i class="fas fa-quote-right"></i>
+                        <p>{{ testimonial.client_message }}</p>
+                    </div>
+                    <div class="author-info">
+                        {% image testimonial.client_picture scale-50 as img %}
+                        <figure class="image-box"><img src="{{ img.url }} " alt=" {{ img.alt }}"></figure>
+                        <h5>{{ testimonial.client_name}}</h5>
+                        <span class="designation">{{ testimonial.designation }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- testimonial-style-two end -->

@@ -1,0 +1,54 @@
+{% load static %} {% load wagtailimages_tags %}
+
+<!-- contact-section -->
+{% image self.background_image scale-100 as img %}
+<section class="contact-section" style="background-image: url({{ img.url }});">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <div class="col-xl-6 col-lg-12 col-md-12 offset-xl-6 content-column">
+                <div id="content_block_nine">
+                    <div class="content-box">
+                        <div class="sec-title style-three left light">
+                            <h5>{{ self.Small_Heading }}</h5>
+                            <h2>{{ self.Bold_Heading }}</h2>
+                        </div>
+                        <div class="text">
+                            <p>{{ self.Paragraph }}</p>
+                        </div>
+                        <div class="form-inner">
+                            <form action="contact.html" method="post">
+                                <div class="form-group">
+                                    <input type="text" name="{{ self.Field1 }}" placeholder="{{ self.Field1 }} " required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="{{ self.Field2 }}" placeholder="{{ self.Field2 }}" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="{{ self.Field3 }}" placeholder="{{ self.Field3 }}" required="">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="{{ self.Field4 }}" placeholder="{{ self.Field4 }}
+                                    " required="">
+                                </div>
+                                <div class="form-group newselect" >
+                                    <select name="{{ self.DropDown }}"  >
+                                        {% for options in self.dropdown_items %}
+                                        <option value="{{ options.item_name }}">{{ options.item_name }}</option>
+                                        {% endfor %}
+                                    </select>                                    
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="{{ self.Field5 }}" placeholder="{{ self.Field5 }}"></textarea>
+                                </div>
+                                <div class="form-group message-btn">
+                                    <button type="submit" class="theme-btn style-three">send message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-section end -->

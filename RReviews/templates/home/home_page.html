@@ -1,0 +1,254 @@
+{% extends "base.html" %} {% load static %} {% load wagtailcore_tags %} {% block content %} {% block banner %}
+{% load wagtailimages_tags %}
+
+<style>
+  {% image self.Restaurants_Near_Me_front scale-100 as img %}
+#RNearMe{
+  background-image: url({{ img.url}} ) ;
+}
+{% image self.Restaurants_Near_Me_back scale-100 as img %}
+#RNearMe:hover {
+  background-image: url({{ img.url }}) ;
+} 
+
+{% image self.International_Cuisines_Icon_front scale-100 as img %}
+#intcuis{
+  background-image: url({{ img.url}});
+}
+{% image self.International_Cuisines_Icon_back scale-100 as img %}
+#intcuis:hover {
+  background-image: url({{ img.url }});
+}
+
+{% image self.Fine_dining_front scale-100 as img %}
+#fdine{
+  background-image: url({{ img.url}});
+}
+{% image self.Fine_dining_back scale-100 as img %}
+#fdine:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Favourite_Food_front scale-100 as img %}
+#favf{
+  background-image: url({{ img.url}});
+}
+{% image self.Favourite_Food_back scale-100 as img %}
+#favf:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Fast_Food_front scale-100 as img %}
+#fastf{
+  background-image: url({{ img.url}});
+}
+{% image self.Fast_Food_back scale-100 as img %}
+#fastf:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Healthy_Food_front scale-100 as img %}
+#healthyf{
+  background-image: url({{ img.url}});
+}
+{% image self.Healthy_Food_back scale-100 as img %}
+#healthyf:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Child_Friendly_front scale-100 as img %}
+#childf{
+  background-image: url({{ img.url}});
+}
+{% image self.Child_Friendly_back scale-100 as img %}
+#childf:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Cafés_Coffee_front scale-100 as img %}
+#cafec{
+  background-image: url({{ img.url}});
+}
+{% image self.Cafés_Coffee_back scale-100 as img %}
+#cafec:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Todays_Specials_front scale-100 as img %}
+#todays{
+  background-image: url({{ img.url}});
+}
+{% image self.Todays_Specials_back scale-100 as img %}
+#todays:hover {
+  background-image: url({{ img.url }});
+}
+{% image self.Casual_dining_front scale-100 as img %}
+#cdine{
+  background-image: url({{ img.url}});
+}
+{% image self.Casual_dining_back scale-100 as img %}
+#cdine:hover {
+  background-image: url({{ img.url }});
+}
+
+
+</style>
+
+<!-- banner-section -->
+
+
+
+{% image self.banner_image fill-1550x900 as img %}
+<section class="banner-section "
+  style="background-image: url({{ img.url }}); background-repeat: no-repeat;  background-position:top;height: auto; top:-90px;"  >
+
+  <div class="auto-container centred">
+
+    <h1 id="bannerheading">{{ self.banner_tittle }} </h1>
+    <ul class="list-item clearfix">
+      <li id="banner-sub-heading">{{ self.banner_sub_tittle }}</li>
+    </ul>
+
+    <div class="form123">{% include "dropdown.html" %}</div>
+    
+    
+  </div>
+  <div class="tilehbox">
+    <h3 id="orbrowse">Or browse by categories below</h3>
+    <h6 id="intcuisine">Select International Cuisine from the categories below or click more for full list.</h6>
+    <h6 id="fastfood">Select Your Favorite Fast Food or Takeaway Categories From Below</h6>
+    <h6 id="favfood">Enter the name of the dish you are looking for or select  from the favorite categories below
+    </h6>
+    <button class="theme-btn style-one btom" id="btom"> Back to Main Menu</button>
+    
+  </div>
+  
+    <
+  <div class="mainmenu">
+    <div class="tilesmainbox">    
+    <div class="tilebox" >
+      <div class="tile" id="RNearMe"></div>
+      <h5>{{ self.Restaurants_Near_Me_text }}</h5>
+    </div>
+    <div class="tilebox" >
+      <div class="tile thover" id="intcuis" ></div>
+      <h5 class="tiletext">{{ self.International_Cuisines_Icon_text}}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id="fdine"></div>
+      <h5>{{ self.Fine_dining_text}}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id='cdine'></div>
+      <h5>{{ self.Casual_dining_text}}</h5>
+    </div>
+    <div class="tilebox" >
+      <div class="tile thover" id="fastf"></div>
+      <h5 class="tiletext">{{ self.Fast_Food_text}}</h5>
+    </div>
+    
+    </div>
+    <div class="tilesmainbox" style="margin-bottom: 50px;">    
+    <div class="tilebox">
+      <div class="tile thover"  id="favf" ></div>
+      <h5 class="tiletext">{{ self.Favourite_Food_text}}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id='healthyf'></div>
+      <h5>{{ self.Healthy_Food_text }}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id="childf" ></div>
+      <h5>{{ self.Child_Friendly_text}}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id="cafec"></div>
+      <h5>{{ self.Cafés_Coffee_text}}</h5>
+    </div>
+    <div class="tilebox">
+      <div class="tile thover" id="todays"></div>
+      <h5>{{ self.Todays_Specials_text}}</h5>
+    </div>
+    </div>
+</div>
+{% comment %} Code for International Cuisines Sub Menus starts here{% endcomment %}
+<div class="int-cuisines">
+  {% for block in page.IntCuisines %}
+    {% include_block block %}
+  {% endfor %}
+   
+{% comment %}    {% endcomment %}
+</div>
+{% comment %} Code for International Cuisines Sub Menus ends here{% endcomment %}
+{% comment %} Code for Favourite Food  Search box Sub Menus starts here{% endcomment %}
+<div class="fav-food">
+  <form action="#">
+    <div class="input-icons" style="margin-left:-3%; margin-bottom:20px">
+      <i class="fa fa-search icon"></i>
+      <input class="input-field"  id="RSearch" type="text" placeholder="Type to Search-----OR" />
+    </div>
+  </form>
+    {% for block in page.Favfoods %}
+        {% include_block block %}
+    {% endfor %}
+  
+</div>
+{% comment %} Code for Favourite Food  Search box Sub Menus ends here{% endcomment %}
+{% comment %} Code for  Fast Food Search boxes Sub Menus starts here{% endcomment %}
+<div class="fast-food">
+  {% for block in page.FastFoods %}
+    {% include_block block %}
+  {% endfor %}
+</div>
+{% comment %} Code for Fast Food Search boxes Sub Menus ends here{% endcomment %}
+  
+</section>
+<!-- banner-section end -->
+
+
+{% endblock %}
+
+{% for block in page.content %}
+{% include_block block %}
+{% endfor %}
+
+<div id="preload">
+  {% image self.Restaurants_Near_Me_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.International_Cuisines_Icon_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Fine_dining_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Favourite_Food_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Fast_Food_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Healthy_Food_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Child_Friendly_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Cafés_Coffee_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Todays_Specials_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+  {% image self.Casual_dining_back scale-100 as img %}
+  <img src="{{ img.url }}" width="1" height="1" alt="Image 01" />
+ 
+</div>
+
+{% endblock content %}
+
+<script>
+
+// document.querySelectorAll('.thover').forEach(item => {
+//   item.addEventListener('mouseover', event => {
+    document.getElementById("RNearMe").style.color= "yellow ";
+//   })
+// })
+
+// intcuis.addEventListener("mouseover", function () {
+//     document.getElementById("RNearMe").style.backgroundImage = "url({% static 'images/background/bg1.png' %}) ";
+// }
+
+document.getElementById('intcuis').addEventListener('click', ()=>{
+  document.getElementsByClassName('mainmenu').style.display= 'none';
+  document.getElementsByClassName('int-cuisines').style.display= 'flex';
+})
+
+</script>
+
+
